@@ -2,13 +2,13 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "dc15ed90",
+   "id": "cf3f9375",
    "metadata": {
     "papermill": {
-     "duration": 0.004727,
-     "end_time": "2026-03-24T14:19:25.882174",
+     "duration": 0.00472,
+     "end_time": "2026-03-25T01:48:51.728136",
      "exception": false,
-     "start_time": "2026-03-24T14:19:25.877447",
+     "start_time": "2026-03-25T01:48:51.723416",
      "status": "completed"
     },
     "tags": []
@@ -20,19 +20,19 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "aa79103b",
+   "id": "61ae07cc",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-24T14:19:25.889376Z",
-     "iopub.status.busy": "2026-03-24T14:19:25.888728Z",
-     "iopub.status.idle": "2026-03-24T14:19:26.696518Z",
-     "shell.execute_reply": "2026-03-24T14:19:26.695818Z"
+     "iopub.execute_input": "2026-03-25T01:48:51.734794Z",
+     "iopub.status.busy": "2026-03-25T01:48:51.734291Z",
+     "iopub.status.idle": "2026-03-25T01:48:53.157601Z",
+     "shell.execute_reply": "2026-03-25T01:48:53.157023Z"
     },
     "papermill": {
-     "duration": 0.813436,
-     "end_time": "2026-03-24T14:19:26.698437",
+     "duration": 1.428538,
+     "end_time": "2026-03-25T01:48:53.159339",
      "exception": false,
-     "start_time": "2026-03-24T14:19:25.885001",
+     "start_time": "2026-03-25T01:48:51.730801",
      "status": "completed"
     },
     "tags": []
@@ -58,19 +58,19 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "c074d02b",
+   "id": "1ae5172e",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-24T14:19:26.705945Z",
-     "iopub.status.busy": "2026-03-24T14:19:26.705330Z",
-     "iopub.status.idle": "2026-03-24T14:19:26.732057Z",
-     "shell.execute_reply": "2026-03-24T14:19:26.731085Z"
+     "iopub.execute_input": "2026-03-25T01:48:53.166462Z",
+     "iopub.status.busy": "2026-03-25T01:48:53.165877Z",
+     "iopub.status.idle": "2026-03-25T01:48:53.201197Z",
+     "shell.execute_reply": "2026-03-25T01:48:53.200436Z"
     },
     "papermill": {
-     "duration": 0.031991,
-     "end_time": "2026-03-24T14:19:26.733467",
+     "duration": 0.0403,
+     "end_time": "2026-03-25T01:48:53.202545",
      "exception": false,
-     "start_time": "2026-03-24T14:19:26.701476",
+     "start_time": "2026-03-25T01:48:53.162245",
      "status": "completed"
     },
     "tags": []
@@ -113,53 +113,53 @@
        "  </thead>\n",
        "  <tbody>\n",
        "    <tr>\n",
-       "      <th>8380</th>\n",
-       "      <td>14204</td>\n",
-       "      <td>images/14204.png</td>\n",
-       "      <td>W48</td>\n",
+       "      <th>22533</th>\n",
+       "      <td>38078</td>\n",
+       "      <td>images/38078.png</td>\n",
+       "      <td>W46</td>\n",
        "      <td>5</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>12553</th>\n",
-       "      <td>21210</td>\n",
-       "      <td>images/21210.png</td>\n",
-       "      <td>W41</td>\n",
-       "      <td>3</td>\n",
+       "      <th>20511</th>\n",
+       "      <td>34643</td>\n",
+       "      <td>images/34643.png</td>\n",
+       "      <td>W42</td>\n",
+       "      <td>4</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>3563</th>\n",
-       "      <td>6001</td>\n",
-       "      <td>images/06001.png</td>\n",
-       "      <td>W01</td>\n",
-       "      <td>5</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>3098</th>\n",
-       "      <td>5195</td>\n",
-       "      <td>images/05195.png</td>\n",
-       "      <td>W08</td>\n",
-       "      <td>3</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>34086</th>\n",
-       "      <td>25180</td>\n",
-       "      <td>images/25180.png</td>\n",
-       "      <td>W12</td>\n",
+       "      <th>3487</th>\n",
+       "      <td>5862</td>\n",
+       "      <td>images/05862.png</td>\n",
+       "      <td>W33</td>\n",
        "      <td>1</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>21160</th>\n",
-       "      <td>35732</td>\n",
-       "      <td>images/35732.png</td>\n",
-       "      <td>W01</td>\n",
+       "      <th>22464</th>\n",
+       "      <td>37966</td>\n",
+       "      <td>images/37966.png</td>\n",
+       "      <td>W19</td>\n",
+       "      <td>2</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>12393</th>\n",
+       "      <td>20940</td>\n",
+       "      <td>images/20940.png</td>\n",
+       "      <td>W06</td>\n",
        "      <td>1</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>2255</th>\n",
-       "      <td>3765</td>\n",
-       "      <td>images/03765.png</td>\n",
-       "      <td>W48</td>\n",
-       "      <td>5</td>\n",
+       "      <th>35078</th>\n",
+       "      <td>27558</td>\n",
+       "      <td>images/27558.png</td>\n",
+       "      <td>-1</td>\n",
+       "      <td>6</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>6830</th>\n",
+       "      <td>11518</td>\n",
+       "      <td>images/11518.png</td>\n",
+       "      <td>W06</td>\n",
+       "      <td>7</td>\n",
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
@@ -167,13 +167,13 @@
       ],
       "text/plain": [
        "       image_id        image_path writer_id  pen_id\n",
-       "8380      14204  images/14204.png       W48       5\n",
-       "12553     21210  images/21210.png       W41       3\n",
-       "3563       6001  images/06001.png       W01       5\n",
-       "3098       5195  images/05195.png       W08       3\n",
-       "34086     25180  images/25180.png       W12       1\n",
-       "21160     35732  images/35732.png       W01       1\n",
-       "2255       3765  images/03765.png       W48       5"
+       "22533     38078  images/38078.png       W46       5\n",
+       "20511     34643  images/34643.png       W42       4\n",
+       "3487       5862  images/05862.png       W33       1\n",
+       "22464     37966  images/37966.png       W19       2\n",
+       "12393     20940  images/20940.png       W06       1\n",
+       "35078     27558  images/27558.png        -1       6\n",
+       "6830      11518  images/11518.png       W06       7"
       ]
      },
      "execution_count": 2,
@@ -191,19 +191,19 @@
   {
    "cell_type": "code",
    "execution_count": 3,
-   "id": "2a90b8da",
+   "id": "bfa58ed7",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-24T14:19:26.740094Z",
-     "iopub.status.busy": "2026-03-24T14:19:26.739845Z",
-     "iopub.status.idle": "2026-03-24T14:19:26.744478Z",
-     "shell.execute_reply": "2026-03-24T14:19:26.743798Z"
+     "iopub.execute_input": "2026-03-25T01:48:53.209278Z",
+     "iopub.status.busy": "2026-03-25T01:48:53.209056Z",
+     "iopub.status.idle": "2026-03-25T01:48:53.213630Z",
+     "shell.execute_reply": "2026-03-25T01:48:53.212876Z"
     },
     "papermill": {
-     "duration": 0.00953,
-     "end_time": "2026-03-24T14:19:26.745917",
+     "duration": 0.009757,
+     "end_time": "2026-03-25T01:48:53.215251",
      "exception": false,
-     "start_time": "2026-03-24T14:19:26.736387",
+     "start_time": "2026-03-25T01:48:53.205494",
      "status": "completed"
     },
     "tags": []
@@ -216,19 +216,19 @@
   {
    "cell_type": "code",
    "execution_count": 4,
-   "id": "db8a8723",
+   "id": "653c905a",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-24T14:19:26.752632Z",
-     "iopub.status.busy": "2026-03-24T14:19:26.752217Z",
-     "iopub.status.idle": "2026-03-24T14:19:30.350652Z",
-     "shell.execute_reply": "2026-03-24T14:19:30.349855Z"
+     "iopub.execute_input": "2026-03-25T01:48:53.223927Z",
+     "iopub.status.busy": "2026-03-25T01:48:53.223699Z",
+     "iopub.status.idle": "2026-03-25T01:48:59.295259Z",
+     "shell.execute_reply": "2026-03-25T01:48:59.294677Z"
     },
     "papermill": {
-     "duration": 3.603714,
-     "end_time": "2026-03-24T14:19:30.352362",
+     "duration": 6.077591,
+     "end_time": "2026-03-25T01:48:59.296800",
      "exception": false,
-     "start_time": "2026-03-24T14:19:26.748648",
+     "start_time": "2026-03-25T01:48:53.219209",
      "status": "completed"
     },
     "tags": []
@@ -241,13 +241,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "2325b4a1",
+   "id": "64cde679",
    "metadata": {
     "papermill": {
-     "duration": 0.002929,
-     "end_time": "2026-03-24T14:19:30.358420",
+     "duration": 0.002767,
+     "end_time": "2026-03-25T01:48:59.302598",
      "exception": false,
-     "start_time": "2026-03-24T14:19:30.355491",
+     "start_time": "2026-03-25T01:48:59.299831",
      "status": "completed"
     },
     "tags": []
@@ -259,19 +259,19 @@
   {
    "cell_type": "code",
    "execution_count": 5,
-   "id": "b89362fe",
+   "id": "f25e1511",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-24T14:19:30.366000Z",
-     "iopub.status.busy": "2026-03-24T14:19:30.365245Z",
-     "iopub.status.idle": "2026-03-24T14:19:31.768425Z",
-     "shell.execute_reply": "2026-03-24T14:19:31.767511Z"
+     "iopub.execute_input": "2026-03-25T01:48:59.309801Z",
+     "iopub.status.busy": "2026-03-25T01:48:59.309188Z",
+     "iopub.status.idle": "2026-03-25T01:49:01.682087Z",
+     "shell.execute_reply": "2026-03-25T01:49:01.681134Z"
     },
     "papermill": {
-     "duration": 1.408758,
-     "end_time": "2026-03-24T14:19:31.770026",
+     "duration": 2.378146,
+     "end_time": "2026-03-25T01:49:01.683543",
      "exception": false,
-     "start_time": "2026-03-24T14:19:30.361268",
+     "start_time": "2026-03-25T01:48:59.305397",
      "status": "completed"
     },
     "tags": []
@@ -303,13 +303,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "f10315db",
+   "id": "3950bbb1",
    "metadata": {
     "papermill": {
-     "duration": 0.002852,
-     "end_time": "2026-03-24T14:19:31.775945",
+     "duration": 0.002855,
+     "end_time": "2026-03-25T01:49:01.689343",
      "exception": false,
-     "start_time": "2026-03-24T14:19:31.773093",
+     "start_time": "2026-03-25T01:49:01.686488",
      "status": "completed"
     },
     "tags": []
@@ -321,19 +321,19 @@
   {
    "cell_type": "code",
    "execution_count": 6,
-   "id": "a45d4a8d",
+   "id": "a072577b",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-24T14:19:31.782669Z",
-     "iopub.status.busy": "2026-03-24T14:19:31.782316Z",
-     "iopub.status.idle": "2026-03-24T14:19:36.958806Z",
-     "shell.execute_reply": "2026-03-24T14:19:36.958067Z"
+     "iopub.execute_input": "2026-03-25T01:49:01.696374Z",
+     "iopub.status.busy": "2026-03-25T01:49:01.695653Z",
+     "iopub.status.idle": "2026-03-25T01:49:08.022733Z",
+     "shell.execute_reply": "2026-03-25T01:49:08.021932Z"
     },
     "papermill": {
-     "duration": 5.181859,
-     "end_time": "2026-03-24T14:19:36.960532",
+     "duration": 6.332388,
+     "end_time": "2026-03-25T01:49:08.024451",
      "exception": false,
-     "start_time": "2026-03-24T14:19:31.778673",
+     "start_time": "2026-03-25T01:49:01.692063",
      "status": "completed"
     },
     "tags": []
@@ -373,13 +373,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "0700f02e",
+   "id": "e2a1705d",
    "metadata": {
     "papermill": {
-     "duration": 0.00299,
-     "end_time": "2026-03-24T14:19:36.966714",
+     "duration": 0.002863,
+     "end_time": "2026-03-25T01:49:08.030451",
      "exception": false,
-     "start_time": "2026-03-24T14:19:36.963724",
+     "start_time": "2026-03-25T01:49:08.027588",
      "status": "completed"
     },
     "tags": []
@@ -391,19 +391,19 @@
   {
    "cell_type": "code",
    "execution_count": 7,
-   "id": "3c022e4a",
+   "id": "8f8f420c",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-24T14:19:36.973652Z",
-     "iopub.status.busy": "2026-03-24T14:19:36.973296Z",
-     "iopub.status.idle": "2026-03-24T14:19:36.976751Z",
-     "shell.execute_reply": "2026-03-24T14:19:36.976088Z"
+     "iopub.execute_input": "2026-03-25T01:49:08.037517Z",
+     "iopub.status.busy": "2026-03-25T01:49:08.036839Z",
+     "iopub.status.idle": "2026-03-25T01:49:08.040098Z",
+     "shell.execute_reply": "2026-03-25T01:49:08.039444Z"
     },
     "papermill": {
-     "duration": 0.008653,
-     "end_time": "2026-03-24T14:19:36.978187",
+     "duration": 0.008197,
+     "end_time": "2026-03-25T01:49:08.041395",
      "exception": false,
-     "start_time": "2026-03-24T14:19:36.969534",
+     "start_time": "2026-03-25T01:49:08.033198",
      "status": "completed"
     },
     "tags": []
@@ -430,19 +430,19 @@
   {
    "cell_type": "code",
    "execution_count": 8,
-   "id": "6f5246d4",
+   "id": "79290238",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-24T14:19:36.985155Z",
-     "iopub.status.busy": "2026-03-24T14:19:36.984677Z",
-     "iopub.status.idle": "2026-03-24T14:19:36.990570Z",
-     "shell.execute_reply": "2026-03-24T14:19:36.989929Z"
+     "iopub.execute_input": "2026-03-25T01:49:08.047970Z",
+     "iopub.status.busy": "2026-03-25T01:49:08.047717Z",
+     "iopub.status.idle": "2026-03-25T01:49:08.054408Z",
+     "shell.execute_reply": "2026-03-25T01:49:08.053837Z"
     },
     "papermill": {
-     "duration": 0.010811,
-     "end_time": "2026-03-24T14:19:36.991947",
+     "duration": 0.011564,
+     "end_time": "2026-03-25T01:49:08.055713",
      "exception": false,
-     "start_time": "2026-03-24T14:19:36.981136",
+     "start_time": "2026-03-25T01:49:08.044149",
      "status": "completed"
     },
     "tags": []
@@ -496,13 +496,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "a382729b",
+   "id": "de471338",
    "metadata": {
     "papermill": {
-     "duration": 0.002788,
-     "end_time": "2026-03-24T14:19:36.997508",
+     "duration": 0.002813,
+     "end_time": "2026-03-25T01:49:08.061390",
      "exception": false,
-     "start_time": "2026-03-24T14:19:36.994720",
+     "start_time": "2026-03-25T01:49:08.058577",
      "status": "completed"
     },
     "tags": []
@@ -514,50 +514,50 @@
   {
    "cell_type": "code",
    "execution_count": 9,
-   "id": "7e29127e",
+   "id": "c12725e9",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-24T14:19:37.004266Z",
-     "iopub.status.busy": "2026-03-24T14:19:37.003781Z",
-     "iopub.status.idle": "2026-03-24T14:19:37.007893Z",
-     "shell.execute_reply": "2026-03-24T14:19:37.007307Z"
+     "iopub.execute_input": "2026-03-25T01:49:08.068234Z",
+     "iopub.status.busy": "2026-03-25T01:49:08.067684Z",
+     "iopub.status.idle": "2026-03-25T01:49:12.959561Z",
+     "shell.execute_reply": "2026-03-25T01:49:12.958984Z"
     },
     "papermill": {
-     "duration": 0.008899,
-     "end_time": "2026-03-24T14:19:37.009233",
+     "duration": 4.896945,
+     "end_time": "2026-03-25T01:49:12.961192",
      "exception": false,
-     "start_time": "2026-03-24T14:19:37.000334",
+     "start_time": "2026-03-25T01:49:08.064247",
      "status": "completed"
     },
     "tags": []
    },
    "outputs": [],
    "source": [
+    "import timm\n",
     "import torch.nn as nn\n",
-    "from torchvision.models import resnet34, resnext50_32x4d\n",
     "\n",
-    "def build_model(model_name=\"resnet\"):\n",
+    "def build_model(model_name=\"resnext\"):\n",
     "\n",
-    "    if model_name == \"resnet\":\n",
-    "        model = resnet34(weights=\"IMAGENET1K_V1\")\n",
-    "        model.fc = nn.Linear(model.fc.in_features, 8)\n",
+    "    if model_name == \"resnext\":\n",
+    "        model = timm.create_model(\"resnext26ts\", pretrained=True, num_classes=8)\n",
     "\n",
-    "    elif model_name == \"resnext\":\n",
-    "        model = resnext50_32x4d(weights=\"IMAGENET1K_V1\")\n",
-    "        model.fc = nn.Linear(model.fc.in_features, 8)\n",
+    "    elif model_name == \"convnext\":\n",
+    "        from torchvision.models import convnext_tiny\n",
+    "        model = convnext_tiny(weights=\"IMAGENET1K_V1\")\n",
+    "        model.classifier[2] = nn.Linear(model.classifier[2].in_features, 8)\n",
     "\n",
     "    return model"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "9b0b005e",
+   "id": "b743390a",
    "metadata": {
     "papermill": {
-     "duration": 0.002726,
-     "end_time": "2026-03-24T14:19:37.014736",
+     "duration": 0.002834,
+     "end_time": "2026-03-25T01:49:12.967009",
      "exception": false,
-     "start_time": "2026-03-24T14:19:37.012010",
+     "start_time": "2026-03-25T01:49:12.964175",
      "status": "completed"
     },
     "tags": []
@@ -569,19 +569,19 @@
   {
    "cell_type": "code",
    "execution_count": 10,
-   "id": "6a7f9b71",
+   "id": "8fbadcc8",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-24T14:19:37.021234Z",
-     "iopub.status.busy": "2026-03-24T14:19:37.021027Z",
-     "iopub.status.idle": "2026-03-24T14:19:37.025462Z",
-     "shell.execute_reply": "2026-03-24T14:19:37.024949Z"
+     "iopub.execute_input": "2026-03-25T01:49:12.973951Z",
+     "iopub.status.busy": "2026-03-25T01:49:12.973523Z",
+     "iopub.status.idle": "2026-03-25T01:49:12.978531Z",
+     "shell.execute_reply": "2026-03-25T01:49:12.978011Z"
     },
     "papermill": {
-     "duration": 0.00923,
-     "end_time": "2026-03-24T14:19:37.026707",
+     "duration": 0.010054,
+     "end_time": "2026-03-25T01:49:12.979839",
      "exception": false,
-     "start_time": "2026-03-24T14:19:37.017477",
+     "start_time": "2026-03-25T01:49:12.969785",
      "status": "completed"
     },
     "tags": []
@@ -615,19 +615,19 @@
   {
    "cell_type": "code",
    "execution_count": 11,
-   "id": "659d57f7",
+   "id": "a5f919f3",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-24T14:19:37.033274Z",
-     "iopub.status.busy": "2026-03-24T14:19:37.033057Z",
-     "iopub.status.idle": "2026-03-24T14:19:37.037286Z",
-     "shell.execute_reply": "2026-03-24T14:19:37.036620Z"
+     "iopub.execute_input": "2026-03-25T01:49:12.986432Z",
+     "iopub.status.busy": "2026-03-25T01:49:12.986211Z",
+     "iopub.status.idle": "2026-03-25T01:49:12.990398Z",
+     "shell.execute_reply": "2026-03-25T01:49:12.989839Z"
     },
     "papermill": {
-     "duration": 0.009098,
-     "end_time": "2026-03-24T14:19:37.038622",
+     "duration": 0.008999,
+     "end_time": "2026-03-25T01:49:12.991643",
      "exception": false,
-     "start_time": "2026-03-24T14:19:37.029524",
+     "start_time": "2026-03-25T01:49:12.982644",
      "status": "completed"
     },
     "tags": []
@@ -658,19 +658,19 @@
   {
    "cell_type": "code",
    "execution_count": 12,
-   "id": "230a0470",
+   "id": "58f8a5ea",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-24T14:19:37.045327Z",
-     "iopub.status.busy": "2026-03-24T14:19:37.044763Z",
-     "iopub.status.idle": "2026-03-24T15:12:22.231783Z",
-     "shell.execute_reply": "2026-03-24T15:12:22.230911Z"
+     "iopub.execute_input": "2026-03-25T01:49:12.998303Z",
+     "iopub.status.busy": "2026-03-25T01:49:12.998081Z",
+     "iopub.status.idle": "2026-03-25T03:58:19.653768Z",
+     "shell.execute_reply": "2026-03-25T03:58:19.652885Z"
     },
     "papermill": {
-     "duration": 3165.406832,
-     "end_time": "2026-03-24T15:12:22.448172",
+     "duration": 7746.955585,
+     "end_time": "2026-03-25T03:58:19.950008",
      "exception": false,
-     "start_time": "2026-03-24T14:19:37.041340",
+     "start_time": "2026-03-25T01:49:12.994423",
      "status": "completed"
     },
     "tags": []
@@ -680,252 +680,264 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Training resnet\n",
-      "Downloading: \"https://download.pytorch.org/models/resnet34-b627a593.pth\" to /root/.cache/torch/hub/checkpoints/resnet34-b627a593.pth\n"
+      "Training resnext\n"
      ]
+    },
+    {
+     "data": {
+      "application/vnd.jupyter.widget-view+json": {
+       "model_id": "701d84fb42d74be8a61dabe80bc29915",
+       "version_major": 2,
+       "version_minor": 0
+      },
+      "text/plain": [
+       "model.safetensors:   0%|          | 0.00/41.3M [00:00<?, ?B/s]"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 83.3M/83.3M [00:00<00:00, 222MB/s]\n",
-      "100%|██████████| 356/356 [02:51<00:00,  2.07it/s]\n"
+      "100%|██████████| 356/356 [03:04<00:00,  1.93it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnet Epoch 0 loss 0.6416 val_acc 0.7842\n"
+      "resnext Epoch 0 loss 0.6150 val_acc 0.8920\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 356/356 [02:02<00:00,  2.91it/s]\n"
+      "100%|██████████| 356/356 [02:33<00:00,  2.32it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnet Epoch 1 loss 0.5523 val_acc 0.8447\n"
+      "resnext Epoch 1 loss 0.5046 val_acc 0.8900\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 356/356 [02:01<00:00,  2.93it/s]\n"
+      "100%|██████████| 356/356 [02:33<00:00,  2.32it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnet Epoch 2 loss 0.5217 val_acc 0.8675\n"
+      "resnext Epoch 2 loss 0.4749 val_acc 0.8877\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 356/356 [02:05<00:00,  2.83it/s]\n"
+      "100%|██████████| 356/356 [02:33<00:00,  2.32it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnet Epoch 3 loss 0.5059 val_acc 0.8875\n"
+      "resnext Epoch 3 loss 0.4565 val_acc 0.9135\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 356/356 [02:00<00:00,  2.96it/s]\n"
+      "100%|██████████| 356/356 [02:33<00:00,  2.32it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnet Epoch 4 loss 0.4836 val_acc 0.8884\n"
+      "resnext Epoch 4 loss 0.4354 val_acc 0.9192\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 356/356 [01:58<00:00,  3.01it/s]\n"
+      "100%|██████████| 356/356 [02:33<00:00,  2.32it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnet Epoch 5 loss 0.4646 val_acc 0.8917\n"
+      "resnext Epoch 5 loss 0.4186 val_acc 0.9318\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 356/356 [01:57<00:00,  3.04it/s]\n"
+      "100%|██████████| 356/356 [02:33<00:00,  2.32it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnet Epoch 6 loss 0.4474 val_acc 0.9265\n"
+      "resnext Epoch 6 loss 0.4044 val_acc 0.9374\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 356/356 [01:53<00:00,  3.13it/s]\n"
+      "100%|██████████| 356/356 [02:33<00:00,  2.32it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnet Epoch 7 loss 0.4287 val_acc 0.9197\n"
+      "resnext Epoch 7 loss 0.3907 val_acc 0.9341\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 356/356 [01:53<00:00,  3.14it/s]\n"
+      "100%|██████████| 356/356 [02:33<00:00,  2.32it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnet Epoch 8 loss 0.4146 val_acc 0.9276\n"
+      "resnext Epoch 8 loss 0.3800 val_acc 0.9381\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 356/356 [01:51<00:00,  3.18it/s]\n"
+      "100%|██████████| 356/356 [02:33<00:00,  2.32it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnet Epoch 9 loss 0.4025 val_acc 0.9342\n",
-      "Best resnet val_acc: 0.9342\n",
-      "Training resnext\n",
-      "Downloading: \"https://download.pytorch.org/models/resnext50_32x4d-7cdf4587.pth\" to /root/.cache/torch/hub/checkpoints/resnext50_32x4d-7cdf4587.pth\n"
+      "resnext Epoch 9 loss 0.3750 val_acc 0.9369\n",
+      "Best resnext val_acc: 0.9381\n",
+      "Training convnext\n",
+      "Downloading: \"https://download.pytorch.org/models/convnext_tiny-983f1562.pth\" to /root/.cache/torch/hub/checkpoints/convnext_tiny-983f1562.pth\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 95.8M/95.8M [00:00<00:00, 224MB/s]\n",
-      "100%|██████████| 356/356 [04:02<00:00,  1.47it/s]\n"
+      "100%|██████████| 109M/109M [00:00<00:00, 176MB/s] \n",
+      "100%|██████████| 356/356 [14:09<00:00,  2.39s/it]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnext Epoch 0 loss 0.6103 val_acc 0.8665\n"
+      "convnext Epoch 0 loss 0.6178 val_acc 0.8624\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 356/356 [04:02<00:00,  1.47it/s]\n"
+      "100%|██████████| 356/356 [14:06<00:00,  2.38s/it]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnext Epoch 1 loss 0.5236 val_acc 0.8827\n"
+      "convnext Epoch 1 loss 0.5132 val_acc 0.8972\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 356/356 [04:02<00:00,  1.47it/s]\n"
+      "100%|██████████| 356/356 [14:06<00:00,  2.38s/it]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnext Epoch 2 loss 0.4954 val_acc 0.9015\n"
+      "convnext Epoch 2 loss 0.4736 val_acc 0.8693\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 356/356 [04:02<00:00,  1.47it/s]\n"
+      "100%|██████████| 356/356 [14:06<00:00,  2.38s/it]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnext Epoch 3 loss 0.4666 val_acc 0.9006\n"
+      "convnext Epoch 3 loss 0.4428 val_acc 0.9212\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 356/356 [04:02<00:00,  1.47it/s]\n"
+      "100%|██████████| 356/356 [14:06<00:00,  2.38s/it]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnext Epoch 4 loss 0.4422 val_acc 0.8894\n"
+      "convnext Epoch 4 loss 0.4083 val_acc 0.9280\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 356/356 [04:02<00:00,  1.47it/s]\n"
+      "100%|██████████| 356/356 [14:06<00:00,  2.38s/it]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnext Epoch 5 loss 0.4170 val_acc 0.9240\n"
+      "convnext Epoch 5 loss 0.3798 val_acc 0.9349\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 356/356 [04:02<00:00,  1.47it/s]\n"
+      "100%|██████████| 356/356 [14:06<00:00,  2.38s/it]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "resnext Epoch 6 loss 0.3962 val_acc 0.9349\n",
-      "Best resnext val_acc: 0.9349\n"
+      "convnext Epoch 6 loss 0.3624 val_acc 0.9420\n",
+      "Best convnext val_acc: 0.9420\n"
      ]
     }
    ],
@@ -935,8 +947,8 @@
     "device = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n",
     "\n",
     "BATCH_SIZE = 96\n",
-    "EPOCHS_resnet = 10\n",
-    "EPOCHS_resnext = 7\n",
+    "EPOCHS_resnext = 10\n",
+    "EPOCHS_convnext = 7\n",
     "\n",
     "models = []\n",
     "\n",
@@ -959,7 +971,7 @@
     "    pin_memory=True\n",
     ")\n",
     "\n",
-    "for model_name in [\"resnet\", \"resnext\"]:\n",
+    "for model_name in [\"resnext\", \"convnext\"]:\n",
     "\n",
     "    print(f\"Training {model_name}\")\n",
     "\n",
@@ -967,14 +979,14 @@
     "\n",
     "    optimizer = torch.optim.AdamW(\n",
     "        model.parameters(),\n",
-    "        lr=3e-4,\n",
-    "        weight_decay=1e-4\n",
+    "        lr=2e-4,\n",
+    "        weight_decay=6e-5\n",
     "    )\n",
     "\n",
-    "    if model_name == \"resnet\":\n",
-    "        EPOCHS = EPOCHS_resnet\n",
-    "    else:\n",
+    "    if model_name == \"resnext\":\n",
     "        EPOCHS = EPOCHS_resnext\n",
+    "    else:\n",
+    "        EPOCHS = EPOCHS_convnext\n",
     "\n",
     "    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(\n",
     "        optimizer,\n",
@@ -1003,19 +1015,19 @@
   {
    "cell_type": "code",
    "execution_count": 13,
-   "id": "7601b72d",
+   "id": "98c86656",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-24T15:12:22.874161Z",
-     "iopub.status.busy": "2026-03-24T15:12:22.873814Z",
-     "iopub.status.idle": "2026-03-24T15:14:25.963568Z",
-     "shell.execute_reply": "2026-03-24T15:14:25.962920Z"
+     "iopub.execute_input": "2026-03-25T03:58:20.396606Z",
+     "iopub.status.busy": "2026-03-25T03:58:20.396267Z",
+     "iopub.status.idle": "2026-03-25T04:01:16.346320Z",
+     "shell.execute_reply": "2026-03-25T04:01:16.345677Z"
     },
     "papermill": {
-     "duration": 123.302724,
-     "end_time": "2026-03-24T15:14:25.965362",
+     "duration": 176.186022,
+     "end_time": "2026-03-25T04:01:16.348042",
      "exception": false,
-     "start_time": "2026-03-24T15:12:22.662638",
+     "start_time": "2026-03-25T03:58:20.162020",
      "status": "completed"
     },
     "tags": []
@@ -1073,13 +1085,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "5fd5c6c7",
+   "id": "983172cb",
    "metadata": {
     "papermill": {
-     "duration": 0.220229,
-     "end_time": "2026-03-24T15:14:26.402934",
+     "duration": 0.210756,
+     "end_time": "2026-03-25T04:01:16.769852",
      "exception": false,
-     "start_time": "2026-03-24T15:14:26.182705",
+     "start_time": "2026-03-25T04:01:16.559096",
      "status": "completed"
     },
     "tags": []
@@ -1091,19 +1103,19 @@
   {
    "cell_type": "code",
    "execution_count": 14,
-   "id": "e01cc6d4",
+   "id": "b13eb904",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-24T15:14:26.836377Z",
-     "iopub.status.busy": "2026-03-24T15:14:26.836074Z",
-     "iopub.status.idle": "2026-03-24T15:14:26.855635Z",
-     "shell.execute_reply": "2026-03-24T15:14:26.854922Z"
+     "iopub.execute_input": "2026-03-25T04:01:17.189904Z",
+     "iopub.status.busy": "2026-03-25T04:01:17.189346Z",
+     "iopub.status.idle": "2026-03-25T04:01:17.212376Z",
+     "shell.execute_reply": "2026-03-25T04:01:17.211646Z"
     },
     "papermill": {
-     "duration": 0.23818,
-     "end_time": "2026-03-24T15:14:26.857123",
+     "duration": 0.234663,
+     "end_time": "2026-03-25T04:01:17.213871",
      "exception": false,
-     "start_time": "2026-03-24T15:14:26.618943",
+     "start_time": "2026-03-25T04:01:16.979208",
      "status": "completed"
     },
     "tags": []
@@ -1120,20 +1132,97 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
-   "id": "741c94da",
+   "execution_count": 15,
+   "id": "93ba78f4",
    "metadata": {
+    "execution": {
+     "iopub.execute_input": "2026-03-25T04:01:17.709079Z",
+     "iopub.status.busy": "2026-03-25T04:01:17.708733Z",
+     "iopub.status.idle": "2026-03-25T04:01:17.716949Z",
+     "shell.execute_reply": "2026-03-25T04:01:17.716274Z"
+    },
     "papermill": {
-     "duration": 0.309636,
-     "end_time": "2026-03-24T15:14:27.386994",
+     "duration": 0.220259,
+     "end_time": "2026-03-25T04:01:17.718340",
      "exception": false,
-     "start_time": "2026-03-24T15:14:27.077358",
+     "start_time": "2026-03-25T04:01:17.498081",
      "status": "completed"
     },
     "tags": []
    },
-   "outputs": [],
-   "source": []
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>image_id</th>\n",
+       "      <th>pen_id</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>v2_8eb750cb7bac5c42036af72b8253976b</td>\n",
+       "      <td>2</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>v2_04e19b0acea03fe2ae474ce8a4c6b705</td>\n",
+       "      <td>8</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>v2_6b3400d5252124adcc9859cbc78c5d8a</td>\n",
+       "      <td>1</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>v2_79025cb2ef36af3dc15c91056fa225dc</td>\n",
+       "      <td>8</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>v2_3ed2f62c32c69ec191b7e5b86433cb87</td>\n",
+       "      <td>5</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "                              image_id  pen_id\n",
+       "0  v2_8eb750cb7bac5c42036af72b8253976b       2\n",
+       "1  v2_04e19b0acea03fe2ae474ce8a4c6b705       8\n",
+       "2  v2_6b3400d5252124adcc9859cbc78c5d8a       1\n",
+       "3  v2_79025cb2ef36af3dc15c91056fa225dc       8\n",
+       "4  v2_3ed2f62c32c69ec191b7e5b86433cb87       5"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "submission.head(5)"
+   ]
   }
  ],
  "metadata": {
@@ -1171,15 +1260,383 @@
   },
   "papermill": {
    "default_parameters": {},
-   "duration": 3307.542533,
-   "end_time": "2026-03-24T15:14:31.012137",
+   "duration": 7952.478337,
+   "end_time": "2026-03-25T04:01:20.784731",
    "environment_variables": {},
    "exception": null,
    "input_path": "__notebook__.ipynb",
    "output_path": "__notebook__.ipynb",
    "parameters": {},
-   "start_time": "2026-03-24T14:19:23.469604",
+   "start_time": "2026-03-25T01:48:48.306394",
    "version": "2.6.0"
+  },
+  "widgets": {
+   "application/vnd.jupyter.widget-state+json": {
+    "state": {
+     "0d7273ff507f44fab23a1324ef9aded6": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "HTMLStyleModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "HTMLStyleModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "StyleView",
+       "background": null,
+       "description_width": "",
+       "font_size": null,
+       "text_color": null
+      }
+     },
+     "2c2a13511c344c9086c697a26ab8f226": {
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "model_name": "LayoutModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/base",
+       "_model_module_version": "2.0.0",
+       "_model_name": "LayoutModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "LayoutView",
+       "align_content": null,
+       "align_items": null,
+       "align_self": null,
+       "border_bottom": null,
+       "border_left": null,
+       "border_right": null,
+       "border_top": null,
+       "bottom": null,
+       "display": null,
+       "flex": null,
+       "flex_flow": null,
+       "grid_area": null,
+       "grid_auto_columns": null,
+       "grid_auto_flow": null,
+       "grid_auto_rows": null,
+       "grid_column": null,
+       "grid_gap": null,
+       "grid_row": null,
+       "grid_template_areas": null,
+       "grid_template_columns": null,
+       "grid_template_rows": null,
+       "height": null,
+       "justify_content": null,
+       "justify_items": null,
+       "left": null,
+       "margin": null,
+       "max_height": null,
+       "max_width": null,
+       "min_height": null,
+       "min_width": null,
+       "object_fit": null,
+       "object_position": null,
+       "order": null,
+       "overflow": null,
+       "padding": null,
+       "right": null,
+       "top": null,
+       "visibility": null,
+       "width": null
+      }
+     },
+     "54ad42daafce4bccbb042d0783a8053d": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "HTMLModel",
+      "state": {
+       "_dom_classes": [],
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "HTMLModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/controls",
+       "_view_module_version": "2.0.0",
+       "_view_name": "HTMLView",
+       "description": "",
+       "description_allow_html": false,
+       "layout": "IPY_MODEL_c14f013456d04a5f852a1d22cf06ebad",
+       "placeholder": "​",
+       "style": "IPY_MODEL_0d7273ff507f44fab23a1324ef9aded6",
+       "tabbable": null,
+       "tooltip": null,
+       "value": " 41.3M/41.3M [00:02&lt;00:00, 14.4MB/s]"
+      }
+     },
+     "57d4cdcac6d8417c8f65c5fc3b690c84": {
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "model_name": "LayoutModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/base",
+       "_model_module_version": "2.0.0",
+       "_model_name": "LayoutModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "LayoutView",
+       "align_content": null,
+       "align_items": null,
+       "align_self": null,
+       "border_bottom": null,
+       "border_left": null,
+       "border_right": null,
+       "border_top": null,
+       "bottom": null,
+       "display": null,
+       "flex": null,
+       "flex_flow": null,
+       "grid_area": null,
+       "grid_auto_columns": null,
+       "grid_auto_flow": null,
+       "grid_auto_rows": null,
+       "grid_column": null,
+       "grid_gap": null,
+       "grid_row": null,
+       "grid_template_areas": null,
+       "grid_template_columns": null,
+       "grid_template_rows": null,
+       "height": null,
+       "justify_content": null,
+       "justify_items": null,
+       "left": null,
+       "margin": null,
+       "max_height": null,
+       "max_width": null,
+       "min_height": null,
+       "min_width": null,
+       "object_fit": null,
+       "object_position": null,
+       "order": null,
+       "overflow": null,
+       "padding": null,
+       "right": null,
+       "top": null,
+       "visibility": null,
+       "width": null
+      }
+     },
+     "701d84fb42d74be8a61dabe80bc29915": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "HBoxModel",
+      "state": {
+       "_dom_classes": [],
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "HBoxModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/controls",
+       "_view_module_version": "2.0.0",
+       "_view_name": "HBoxView",
+       "box_style": "",
+       "children": [
+        "IPY_MODEL_edc21702d04c488691785602f2ea125b",
+        "IPY_MODEL_91570ea027a5407696bb81638f4c4c3f",
+        "IPY_MODEL_54ad42daafce4bccbb042d0783a8053d"
+       ],
+       "layout": "IPY_MODEL_2c2a13511c344c9086c697a26ab8f226",
+       "tabbable": null,
+       "tooltip": null
+      }
+     },
+     "7433b734f7fb4e169bcebbab2b752fcb": {
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "model_name": "LayoutModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/base",
+       "_model_module_version": "2.0.0",
+       "_model_name": "LayoutModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "LayoutView",
+       "align_content": null,
+       "align_items": null,
+       "align_self": null,
+       "border_bottom": null,
+       "border_left": null,
+       "border_right": null,
+       "border_top": null,
+       "bottom": null,
+       "display": null,
+       "flex": null,
+       "flex_flow": null,
+       "grid_area": null,
+       "grid_auto_columns": null,
+       "grid_auto_flow": null,
+       "grid_auto_rows": null,
+       "grid_column": null,
+       "grid_gap": null,
+       "grid_row": null,
+       "grid_template_areas": null,
+       "grid_template_columns": null,
+       "grid_template_rows": null,
+       "height": null,
+       "justify_content": null,
+       "justify_items": null,
+       "left": null,
+       "margin": null,
+       "max_height": null,
+       "max_width": null,
+       "min_height": null,
+       "min_width": null,
+       "object_fit": null,
+       "object_position": null,
+       "order": null,
+       "overflow": null,
+       "padding": null,
+       "right": null,
+       "top": null,
+       "visibility": null,
+       "width": null
+      }
+     },
+     "91570ea027a5407696bb81638f4c4c3f": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "FloatProgressModel",
+      "state": {
+       "_dom_classes": [],
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "FloatProgressModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/controls",
+       "_view_module_version": "2.0.0",
+       "_view_name": "ProgressView",
+       "bar_style": "success",
+       "description": "",
+       "description_allow_html": false,
+       "layout": "IPY_MODEL_7433b734f7fb4e169bcebbab2b752fcb",
+       "max": 41334502.0,
+       "min": 0.0,
+       "orientation": "horizontal",
+       "style": "IPY_MODEL_966bf832be6a411bb790f68576b8dc76",
+       "tabbable": null,
+       "tooltip": null,
+       "value": 41334502.0
+      }
+     },
+     "966bf832be6a411bb790f68576b8dc76": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "ProgressStyleModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "ProgressStyleModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "StyleView",
+       "bar_color": null,
+       "description_width": ""
+      }
+     },
+     "a182fdfc72034be3bbd571cd5574a007": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "HTMLStyleModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "HTMLStyleModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "StyleView",
+       "background": null,
+       "description_width": "",
+       "font_size": null,
+       "text_color": null
+      }
+     },
+     "c14f013456d04a5f852a1d22cf06ebad": {
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "model_name": "LayoutModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/base",
+       "_model_module_version": "2.0.0",
+       "_model_name": "LayoutModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "LayoutView",
+       "align_content": null,
+       "align_items": null,
+       "align_self": null,
+       "border_bottom": null,
+       "border_left": null,
+       "border_right": null,
+       "border_top": null,
+       "bottom": null,
+       "display": null,
+       "flex": null,
+       "flex_flow": null,
+       "grid_area": null,
+       "grid_auto_columns": null,
+       "grid_auto_flow": null,
+       "grid_auto_rows": null,
+       "grid_column": null,
+       "grid_gap": null,
+       "grid_row": null,
+       "grid_template_areas": null,
+       "grid_template_columns": null,
+       "grid_template_rows": null,
+       "height": null,
+       "justify_content": null,
+       "justify_items": null,
+       "left": null,
+       "margin": null,
+       "max_height": null,
+       "max_width": null,
+       "min_height": null,
+       "min_width": null,
+       "object_fit": null,
+       "object_position": null,
+       "order": null,
+       "overflow": null,
+       "padding": null,
+       "right": null,
+       "top": null,
+       "visibility": null,
+       "width": null
+      }
+     },
+     "edc21702d04c488691785602f2ea125b": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "HTMLModel",
+      "state": {
+       "_dom_classes": [],
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "HTMLModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/controls",
+       "_view_module_version": "2.0.0",
+       "_view_name": "HTMLView",
+       "description": "",
+       "description_allow_html": false,
+       "layout": "IPY_MODEL_57d4cdcac6d8417c8f65c5fc3b690c84",
+       "placeholder": "​",
+       "style": "IPY_MODEL_a182fdfc72034be3bbd571cd5574a007",
+       "tabbable": null,
+       "tooltip": null,
+       "value": "model.safetensors: 100%"
+      }
+     }
+    },
+    "version_major": 2,
+    "version_minor": 0
+   }
   }
  },
  "nbformat": 4,
