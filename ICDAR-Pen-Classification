@@ -2,13 +2,13 @@
  "cells": [
   {
    "cell_type": "markdown",
-   "id": "db1fd607",
+   "id": "d017307a",
    "metadata": {
     "papermill": {
-     "duration": 0.004669,
-     "end_time": "2026-03-26T02:00:04.788461",
+     "duration": 0.006231,
+     "end_time": "2026-03-29T11:30:25.443567",
      "exception": false,
-     "start_time": "2026-03-26T02:00:04.783792",
+     "start_time": "2026-03-29T11:30:25.437336",
      "status": "completed"
     },
     "tags": []
@@ -20,19 +20,19 @@
   {
    "cell_type": "code",
    "execution_count": 1,
-   "id": "9970b11a",
+   "id": "bc2ce4cb",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T02:00:04.797544Z",
-     "iopub.status.busy": "2026-03-26T02:00:04.797267Z",
-     "iopub.status.idle": "2026-03-26T02:00:05.617609Z",
-     "shell.execute_reply": "2026-03-26T02:00:05.616829Z"
+     "iopub.execute_input": "2026-03-29T11:30:25.452995Z",
+     "iopub.status.busy": "2026-03-29T11:30:25.452700Z",
+     "iopub.status.idle": "2026-03-29T11:30:26.294865Z",
+     "shell.execute_reply": "2026-03-29T11:30:26.294303Z"
     },
     "papermill": {
-     "duration": 0.827224,
-     "end_time": "2026-03-26T02:00:05.619527",
+     "duration": 0.848934,
+     "end_time": "2026-03-29T11:30:26.296652",
      "exception": false,
-     "start_time": "2026-03-26T02:00:04.792303",
+     "start_time": "2026-03-29T11:30:25.447718",
      "status": "completed"
     },
     "tags": []
@@ -43,6 +43,7 @@
     "import pandas as pd\n",
     "import numpy as np\n",
     "import os\n",
+    "import copy\n",
     "\n",
     "DATASET_DIR = \"/kaggle/input/competitions/icdar-2026-circleid-pen-classification\"\n",
     "train_1 = pd.read_csv(\"/kaggle/input/competitions/icdar-2026-circleid-pen-classification/train.csv\")\n",
@@ -58,19 +59,19 @@
   {
    "cell_type": "code",
    "execution_count": 2,
-   "id": "e823c8e8",
+   "id": "098cf2c6",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T02:00:05.628818Z",
-     "iopub.status.busy": "2026-03-26T02:00:05.628272Z",
-     "iopub.status.idle": "2026-03-26T02:00:05.655564Z",
-     "shell.execute_reply": "2026-03-26T02:00:05.654821Z"
+     "iopub.execute_input": "2026-03-29T11:30:26.306492Z",
+     "iopub.status.busy": "2026-03-29T11:30:26.305855Z",
+     "iopub.status.idle": "2026-03-29T11:30:26.334280Z",
+     "shell.execute_reply": "2026-03-29T11:30:26.333495Z"
     },
     "papermill": {
-     "duration": 0.033297,
-     "end_time": "2026-03-26T02:00:05.656917",
+     "duration": 0.034603,
+     "end_time": "2026-03-29T11:30:26.335720",
      "exception": false,
-     "start_time": "2026-03-26T02:00:05.623620",
+     "start_time": "2026-03-29T11:30:26.301117",
      "status": "completed"
     },
     "tags": []
@@ -113,53 +114,53 @@
        "  </thead>\n",
        "  <tbody>\n",
        "    <tr>\n",
-       "      <th>14247</th>\n",
-       "      <td>23968</td>\n",
-       "      <td>images/23968.png</td>\n",
-       "      <td>W50</td>\n",
-       "      <td>5</td>\n",
+       "      <th>39979</th>\n",
+       "      <td>39553</td>\n",
+       "      <td>images/39553.png</td>\n",
+       "      <td>W08</td>\n",
+       "      <td>2</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>3264</th>\n",
-       "      <td>5500</td>\n",
-       "      <td>images/05500.png</td>\n",
-       "      <td>W13</td>\n",
+       "      <th>6884</th>\n",
+       "      <td>11618</td>\n",
+       "      <td>images/11618.png</td>\n",
+       "      <td>W48</td>\n",
        "      <td>4</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>31467</th>\n",
-       "      <td>18673</td>\n",
-       "      <td>images/18673.png</td>\n",
-       "      <td>W04</td>\n",
-       "      <td>5</td>\n",
+       "      <th>24230</th>\n",
+       "      <td>937</td>\n",
+       "      <td>images/00937.png</td>\n",
+       "      <td>W10</td>\n",
+       "      <td>2</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>20022</th>\n",
-       "      <td>33799</td>\n",
-       "      <td>images/33799.png</td>\n",
-       "      <td>W43</td>\n",
+       "      <th>26122</th>\n",
+       "      <td>5597</td>\n",
+       "      <td>images/05597.png</td>\n",
+       "      <td>W14</td>\n",
+       "      <td>3</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>15820</th>\n",
+       "      <td>26672</td>\n",
+       "      <td>images/26672.png</td>\n",
+       "      <td>W41</td>\n",
+       "      <td>8</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>35427</th>\n",
+       "      <td>28287</td>\n",
+       "      <td>images/28287.png</td>\n",
+       "      <td>-1</td>\n",
        "      <td>1</td>\n",
        "    </tr>\n",
        "    <tr>\n",
-       "      <th>36853</th>\n",
-       "      <td>31824</td>\n",
-       "      <td>images/31824.png</td>\n",
-       "      <td>W29</td>\n",
-       "      <td>6</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>22337</th>\n",
-       "      <td>37738</td>\n",
-       "      <td>images/37738.png</td>\n",
-       "      <td>W45</td>\n",
-       "      <td>7</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>15967</th>\n",
-       "      <td>26917</td>\n",
-       "      <td>images/26917.png</td>\n",
-       "      <td>W17</td>\n",
-       "      <td>2</td>\n",
+       "      <th>36157</th>\n",
+       "      <td>30083</td>\n",
+       "      <td>images/30083.png</td>\n",
+       "      <td>W50</td>\n",
+       "      <td>5</td>\n",
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
@@ -167,13 +168,13 @@
       ],
       "text/plain": [
        "       image_id        image_path writer_id  pen_id\n",
-       "14247     23968  images/23968.png       W50       5\n",
-       "3264       5500  images/05500.png       W13       4\n",
-       "31467     18673  images/18673.png       W04       5\n",
-       "20022     33799  images/33799.png       W43       1\n",
-       "36853     31824  images/31824.png       W29       6\n",
-       "22337     37738  images/37738.png       W45       7\n",
-       "15967     26917  images/26917.png       W17       2"
+       "39979     39553  images/39553.png       W08       2\n",
+       "6884      11618  images/11618.png       W48       4\n",
+       "24230       937  images/00937.png       W10       2\n",
+       "26122      5597  images/05597.png       W14       3\n",
+       "15820     26672  images/26672.png       W41       8\n",
+       "35427     28287  images/28287.png        -1       1\n",
+       "36157     30083  images/30083.png       W50       5"
       ]
      },
      "execution_count": 2,
@@ -191,19 +192,19 @@
   {
    "cell_type": "code",
    "execution_count": 3,
-   "id": "1e66f4bb",
+   "id": "a77ae8b2",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T02:00:05.665951Z",
-     "iopub.status.busy": "2026-03-26T02:00:05.665497Z",
-     "iopub.status.idle": "2026-03-26T02:00:05.669975Z",
-     "shell.execute_reply": "2026-03-26T02:00:05.669289Z"
+     "iopub.execute_input": "2026-03-29T11:30:26.344948Z",
+     "iopub.status.busy": "2026-03-29T11:30:26.344714Z",
+     "iopub.status.idle": "2026-03-29T11:30:26.349690Z",
+     "shell.execute_reply": "2026-03-29T11:30:26.348935Z"
     },
     "papermill": {
-     "duration": 0.010537,
-     "end_time": "2026-03-26T02:00:05.671339",
+     "duration": 0.011448,
+     "end_time": "2026-03-29T11:30:26.351244",
      "exception": false,
-     "start_time": "2026-03-26T02:00:05.660802",
+     "start_time": "2026-03-29T11:30:26.339796",
      "status": "completed"
     },
     "tags": []
@@ -216,19 +217,19 @@
   {
    "cell_type": "code",
    "execution_count": 4,
-   "id": "9f65634d",
+   "id": "bc5b405e",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T02:00:05.679943Z",
-     "iopub.status.busy": "2026-03-26T02:00:05.679692Z",
-     "iopub.status.idle": "2026-03-26T02:00:09.457481Z",
-     "shell.execute_reply": "2026-03-26T02:00:09.456820Z"
+     "iopub.execute_input": "2026-03-29T11:30:26.360380Z",
+     "iopub.status.busy": "2026-03-29T11:30:26.360133Z",
+     "iopub.status.idle": "2026-03-29T11:30:30.130641Z",
+     "shell.execute_reply": "2026-03-29T11:30:30.129993Z"
     },
     "papermill": {
-     "duration": 3.784052,
-     "end_time": "2026-03-26T02:00:09.459173",
+     "duration": 3.777131,
+     "end_time": "2026-03-29T11:30:30.132383",
      "exception": false,
-     "start_time": "2026-03-26T02:00:05.675121",
+     "start_time": "2026-03-29T11:30:26.355252",
      "status": "completed"
     },
     "tags": []
@@ -241,13 +242,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "8fdbcfdd",
+   "id": "824b6599",
    "metadata": {
     "papermill": {
-     "duration": 0.003776,
-     "end_time": "2026-03-26T02:00:09.467139",
+     "duration": 0.00384,
+     "end_time": "2026-03-29T11:30:30.140336",
      "exception": false,
-     "start_time": "2026-03-26T02:00:09.463363",
+     "start_time": "2026-03-29T11:30:30.136496",
      "status": "completed"
     },
     "tags": []
@@ -259,57 +260,143 @@
   {
    "cell_type": "code",
    "execution_count": 5,
-   "id": "70c467c5",
+   "id": "5e5e229d",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T02:00:09.475954Z",
-     "iopub.status.busy": "2026-03-26T02:00:09.475555Z",
-     "iopub.status.idle": "2026-03-26T02:00:10.949689Z",
-     "shell.execute_reply": "2026-03-26T02:00:10.948939Z"
+     "iopub.execute_input": "2026-03-29T11:30:30.149350Z",
+     "iopub.status.busy": "2026-03-29T11:30:30.148966Z",
+     "iopub.status.idle": "2026-03-29T11:30:31.673614Z",
+     "shell.execute_reply": "2026-03-29T11:30:31.672833Z"
     },
     "papermill": {
-     "duration": 1.480424,
-     "end_time": "2026-03-26T02:00:10.951323",
+     "duration": 1.530805,
+     "end_time": "2026-03-29T11:30:31.675005",
      "exception": false,
-     "start_time": "2026-03-26T02:00:09.470899",
+     "start_time": "2026-03-29T11:30:30.144200",
      "status": "completed"
     },
     "tags": []
    },
    "outputs": [
     {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Fold 0: train=(26833, 5), val=(13417, 5)\n",
-      "Fold 1: train=(26833, 5), val=(13417, 5)\n",
-      "Fold 2: train=(26834, 5), val=(13416, 5)\n"
-     ]
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>image_id</th>\n",
+       "      <th>image_path</th>\n",
+       "      <th>writer_id</th>\n",
+       "      <th>pen_id</th>\n",
+       "      <th>label</th>\n",
+       "      <th>fold</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>4</td>\n",
+       "      <td>images/00004.png</td>\n",
+       "      <td>W27</td>\n",
+       "      <td>8</td>\n",
+       "      <td>7</td>\n",
+       "      <td>4</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>5</td>\n",
+       "      <td>images/00005.png</td>\n",
+       "      <td>W17</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>1</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>7</td>\n",
+       "      <td>images/00007.png</td>\n",
+       "      <td>W01</td>\n",
+       "      <td>8</td>\n",
+       "      <td>7</td>\n",
+       "      <td>6</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>8</td>\n",
+       "      <td>images/00008.png</td>\n",
+       "      <td>W17</td>\n",
+       "      <td>5</td>\n",
+       "      <td>4</td>\n",
+       "      <td>1</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>9</td>\n",
+       "      <td>images/00009.png</td>\n",
+       "      <td>W24</td>\n",
+       "      <td>4</td>\n",
+       "      <td>3</td>\n",
+       "      <td>6</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "   image_id        image_path writer_id  pen_id  label  fold\n",
+       "0         4  images/00004.png       W27       8      7     4\n",
+       "1         5  images/00005.png       W17       1      0     1\n",
+       "2         7  images/00007.png       W01       8      7     6\n",
+       "3         8  images/00008.png       W17       5      4     1\n",
+       "4         9  images/00009.png       W24       4      3     6"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
     }
    ],
    "source": [
-    "from sklearn.model_selection import StratifiedKFold\n",
+    "from sklearn.model_selection import GroupKFold\n",
     "\n",
-    "N_FOLDS = 3\n",
-    "skf = StratifiedKFold(n_splits=N_FOLDS, shuffle=True, random_state=42)\n",
-    "fold_splits = []\n",
+    "N_FOLDS = 7\n",
     "\n",
-    "for fold, (train_idx, val_idx) in enumerate(skf.split(train_df, train_df['label'])):\n",
-    "    train_split_df = train_df.iloc[train_idx].reset_index(drop=True)\n",
-    "    val_split_df = train_df.iloc[val_idx].reset_index(drop=True)\n",
-    "    fold_splits.append((train_split_df, val_split_df))\n",
-    "    print(f\"Fold {fold}: train={train_split_df.shape}, val={val_split_df.shape}\")\n"
+    "gkf = GroupKFold(n_splits=N_FOLDS)\n",
+    "\n",
+    "train_df[\"fold\"] = -1\n",
+    "\n",
+    "for fold, (train_idx, val_idx) in enumerate(\n",
+    "        gkf.split(train_df, train_df[\"label\"], groups=train_df[\"writer_id\"])\n",
+    "):\n",
+    "    train_df.loc[val_idx, \"fold\"] = fold\n",
+    "\n",
+    "train_df.head()"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "1bb723e5",
+   "id": "43603fd9",
    "metadata": {
     "papermill": {
-     "duration": 0.004198,
-     "end_time": "2026-03-26T02:00:10.960126",
+     "duration": 0.003977,
+     "end_time": "2026-03-29T11:30:31.683104",
      "exception": false,
-     "start_time": "2026-03-26T02:00:10.955928",
+     "start_time": "2026-03-29T11:30:31.679127",
      "status": "completed"
     },
     "tags": []
@@ -321,19 +408,19 @@
   {
    "cell_type": "code",
    "execution_count": 6,
-   "id": "ebf380b5",
+   "id": "8ec67941",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T02:00:10.969321Z",
-     "iopub.status.busy": "2026-03-26T02:00:10.968905Z",
-     "iopub.status.idle": "2026-03-26T02:00:16.178090Z",
-     "shell.execute_reply": "2026-03-26T02:00:16.177349Z"
+     "iopub.execute_input": "2026-03-29T11:30:31.692435Z",
+     "iopub.status.busy": "2026-03-29T11:30:31.691672Z",
+     "iopub.status.idle": "2026-03-29T11:30:37.073576Z",
+     "shell.execute_reply": "2026-03-29T11:30:37.072781Z"
     },
     "papermill": {
-     "duration": 5.215653,
-     "end_time": "2026-03-26T02:00:16.179844",
+     "duration": 5.388185,
+     "end_time": "2026-03-29T11:30:37.075301",
      "exception": false,
-     "start_time": "2026-03-26T02:00:10.964191",
+     "start_time": "2026-03-29T11:30:31.687116",
      "status": "completed"
     },
     "tags": []
@@ -373,13 +460,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "dfef93f3",
+   "id": "0dfa439f",
    "metadata": {
     "papermill": {
-     "duration": 0.003925,
-     "end_time": "2026-03-26T02:00:16.187867",
+     "duration": 0.004154,
+     "end_time": "2026-03-29T11:30:37.083696",
      "exception": false,
-     "start_time": "2026-03-26T02:00:16.183942",
+     "start_time": "2026-03-29T11:30:37.079542",
      "status": "completed"
     },
     "tags": []
@@ -391,19 +478,19 @@
   {
    "cell_type": "code",
    "execution_count": 7,
-   "id": "c973974c",
+   "id": "5003c516",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T02:00:16.196894Z",
-     "iopub.status.busy": "2026-03-26T02:00:16.196451Z",
-     "iopub.status.idle": "2026-03-26T02:00:16.199844Z",
-     "shell.execute_reply": "2026-03-26T02:00:16.199273Z"
+     "iopub.execute_input": "2026-03-29T11:30:37.094393Z",
+     "iopub.status.busy": "2026-03-29T11:30:37.093728Z",
+     "iopub.status.idle": "2026-03-29T11:30:37.097091Z",
+     "shell.execute_reply": "2026-03-29T11:30:37.096448Z"
     },
     "papermill": {
      "duration": 0.009508,
-     "end_time": "2026-03-26T02:00:16.201256",
+     "end_time": "2026-03-29T11:30:37.098416",
      "exception": false,
-     "start_time": "2026-03-26T02:00:16.191748",
+     "start_time": "2026-03-29T11:30:37.088908",
      "status": "completed"
     },
     "tags": []
@@ -430,19 +517,19 @@
   {
    "cell_type": "code",
    "execution_count": 8,
-   "id": "ec7b4e3a",
+   "id": "bc34e1fb",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T02:00:16.211034Z",
-     "iopub.status.busy": "2026-03-26T02:00:16.210391Z",
-     "iopub.status.idle": "2026-03-26T02:00:16.217876Z",
-     "shell.execute_reply": "2026-03-26T02:00:16.217301Z"
+     "iopub.execute_input": "2026-03-29T11:30:37.108275Z",
+     "iopub.status.busy": "2026-03-29T11:30:37.107632Z",
+     "iopub.status.idle": "2026-03-29T11:30:37.113663Z",
+     "shell.execute_reply": "2026-03-29T11:30:37.113058Z"
     },
     "papermill": {
-     "duration": 0.013698,
-     "end_time": "2026-03-26T02:00:16.219237",
+     "duration": 0.012319,
+     "end_time": "2026-03-29T11:30:37.114925",
      "exception": false,
-     "start_time": "2026-03-26T02:00:16.205539",
+     "start_time": "2026-03-29T11:30:37.102606",
      "status": "completed"
     },
     "tags": []
@@ -496,13 +583,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "4db54794",
+   "id": "2704cfba",
    "metadata": {
     "papermill": {
-     "duration": 0.003899,
-     "end_time": "2026-03-26T02:00:16.227044",
+     "duration": 0.003974,
+     "end_time": "2026-03-29T11:30:37.122983",
      "exception": false,
-     "start_time": "2026-03-26T02:00:16.223145",
+     "start_time": "2026-03-29T11:30:37.119009",
      "status": "completed"
     },
     "tags": []
@@ -514,19 +601,19 @@
   {
    "cell_type": "code",
    "execution_count": 9,
-   "id": "32b8780f",
+   "id": "1fc5bd25",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T02:00:16.235659Z",
-     "iopub.status.busy": "2026-03-26T02:00:16.235185Z",
-     "iopub.status.idle": "2026-03-26T02:00:20.370656Z",
-     "shell.execute_reply": "2026-03-26T02:00:20.369894Z"
+     "iopub.execute_input": "2026-03-29T11:30:37.131462Z",
+     "iopub.status.busy": "2026-03-29T11:30:37.131261Z",
+     "iopub.status.idle": "2026-03-29T11:30:41.387137Z",
+     "shell.execute_reply": "2026-03-29T11:30:41.386301Z"
     },
     "papermill": {
-     "duration": 4.141578,
-     "end_time": "2026-03-26T02:00:20.372306",
+     "duration": 4.262129,
+     "end_time": "2026-03-29T11:30:41.388896",
      "exception": false,
-     "start_time": "2026-03-26T02:00:16.230728",
+     "start_time": "2026-03-29T11:30:37.126767",
      "status": "completed"
     },
     "tags": []
@@ -551,13 +638,13 @@
   },
   {
    "cell_type": "markdown",
-   "id": "add96d3c",
+   "id": "02794c7e",
    "metadata": {
     "papermill": {
-     "duration": 0.003881,
-     "end_time": "2026-03-26T02:00:20.380250",
+     "duration": 0.004167,
+     "end_time": "2026-03-29T11:30:41.397678",
      "exception": false,
-     "start_time": "2026-03-26T02:00:20.376369",
+     "start_time": "2026-03-29T11:30:41.393511",
      "status": "completed"
     },
     "tags": []
@@ -569,19 +656,19 @@
   {
    "cell_type": "code",
    "execution_count": 10,
-   "id": "77218e2d",
+   "id": "b40f26e2",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T02:00:20.389552Z",
-     "iopub.status.busy": "2026-03-26T02:00:20.388913Z",
-     "iopub.status.idle": "2026-03-26T02:00:20.394379Z",
-     "shell.execute_reply": "2026-03-26T02:00:20.393805Z"
+     "iopub.execute_input": "2026-03-29T11:30:41.407298Z",
+     "iopub.status.busy": "2026-03-29T11:30:41.406839Z",
+     "iopub.status.idle": "2026-03-29T11:30:41.412205Z",
+     "shell.execute_reply": "2026-03-29T11:30:41.411544Z"
     },
     "papermill": {
-     "duration": 0.011602,
-     "end_time": "2026-03-26T02:00:20.395772",
+     "duration": 0.011869,
+     "end_time": "2026-03-29T11:30:41.413619",
      "exception": false,
-     "start_time": "2026-03-26T02:00:20.384170",
+     "start_time": "2026-03-29T11:30:41.401750",
      "status": "completed"
     },
     "tags": []
@@ -615,19 +702,19 @@
   {
    "cell_type": "code",
    "execution_count": 11,
-   "id": "0d733514",
+   "id": "3907a881",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T02:00:20.404531Z",
-     "iopub.status.busy": "2026-03-26T02:00:20.404292Z",
-     "iopub.status.idle": "2026-03-26T02:00:20.408837Z",
-     "shell.execute_reply": "2026-03-26T02:00:20.408162Z"
+     "iopub.execute_input": "2026-03-29T11:30:41.423286Z",
+     "iopub.status.busy": "2026-03-29T11:30:41.422983Z",
+     "iopub.status.idle": "2026-03-29T11:30:41.427475Z",
+     "shell.execute_reply": "2026-03-29T11:30:41.426867Z"
     },
     "papermill": {
-     "duration": 0.010632,
-     "end_time": "2026-03-26T02:00:20.410249",
+     "duration": 0.011151,
+     "end_time": "2026-03-29T11:30:41.428984",
      "exception": false,
-     "start_time": "2026-03-26T02:00:20.399617",
+     "start_time": "2026-03-29T11:30:41.417833",
      "status": "completed"
     },
     "tags": []
@@ -658,19 +745,19 @@
   {
    "cell_type": "code",
    "execution_count": 12,
-   "id": "dc928b4b",
+   "id": "623f31a8",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T02:00:20.419628Z",
-     "iopub.status.busy": "2026-03-26T02:00:20.419212Z",
-     "iopub.status.idle": "2026-03-26T04:22:35.286359Z",
-     "shell.execute_reply": "2026-03-26T04:22:35.285463Z"
+     "iopub.execute_input": "2026-03-29T11:30:41.438568Z",
+     "iopub.status.busy": "2026-03-29T11:30:41.438332Z",
+     "iopub.status.idle": "2026-03-29T20:12:34.701767Z",
+     "shell.execute_reply": "2026-03-29T20:12:34.700725Z"
     },
     "papermill": {
-     "duration": 8535.115735,
-     "end_time": "2026-03-26T04:22:35.529814",
+     "duration": 31314.329277,
+     "end_time": "2026-03-29T20:12:35.762643",
      "exception": false,
-     "start_time": "2026-03-26T02:00:20.414079",
+     "start_time": "2026-03-29T11:30:41.433366",
      "status": "completed"
     },
     "tags": []
@@ -680,15 +767,21 @@
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "\n",
-      "========== Fold 1/3 ==========\n",
-      "Training resnext on fold 1\n"
+      "FOLD 0\n",
+      "Training resnext\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"
      ]
     },
     {
      "data": {
       "application/vnd.jupyter.widget-view+json": {
-       "model_id": "f58c7e97c88f491a8f6a5dcf08119c97",
+       "model_id": "fd409b1c373444d680af0ade72331140",
        "version_major": 2,
        "version_minor": 0
       },
@@ -703,72 +796,85 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [02:33<00:00,  1.82it/s]\n"
+      "100%|██████████| 354/354 [03:03<00:00,  1.93it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 1 | resnext Epoch 1/5 loss 0.6393 val_acc 0.8843\n"
+      "resnext Epoch 0 loss 0.6092 val_acc 0.8830\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [02:00<00:00,  2.32it/s]\n"
+      "100%|██████████| 354/354 [02:33<00:00,  2.31it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 1 | resnext Epoch 2/5 loss 0.5115 val_acc 0.8845\n"
+      "resnext Epoch 1 loss 0.4945 val_acc 0.8621\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [02:00<00:00,  2.32it/s]\n"
+      "100%|██████████| 354/354 [02:33<00:00,  2.31it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 1 | resnext Epoch 3/5 loss 0.4784 val_acc 0.8971\n"
+      "resnext Epoch 2 loss 0.4657 val_acc 0.8984\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [02:00<00:00,  2.32it/s]\n"
+      "100%|██████████| 354/354 [02:33<00:00,  2.31it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 1 | resnext Epoch 4/5 loss 0.4555 val_acc 0.9132\n"
+      "resnext Epoch 3 loss 0.4425 val_acc 0.9002\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [02:00<00:00,  2.32it/s]\n"
+      "100%|██████████| 354/354 [02:33<00:00,  2.31it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 1 | resnext Epoch 5/5 loss 0.4385 val_acc 0.9091\n",
-      "Best resnext fold 1 val_acc: 0.9132\n",
-      "Training convnext on fold 1\n",
+      "resnext Epoch 4 loss 0.4214 val_acc 0.8960\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 354/354 [02:33<00:00,  2.31it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 5 loss 0.4090 val_acc 0.9069\n",
+      "Training convnext\n",
       "Downloading: \"https://download.pytorch.org/models/convnext_tiny-983f1562.pth\" to /root/.cache/torch/hub/checkpoints/convnext_tiny-983f1562.pth\n"
      ]
     },
@@ -776,281 +882,915 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 109M/109M [00:00<00:00, 238MB/s] \n",
-      "100%|██████████| 279/279 [11:04<00:00,  2.38s/it]\n"
+      "100%|██████████| 109M/109M [00:00<00:00, 194MB/s] \n",
+      "100%|██████████| 354/354 [14:03<00:00,  2.38s/it]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 1 | convnext Epoch 1/3 loss 0.6418 val_acc 0.8607\n"
+      "convnext Epoch 0 loss 0.6225 val_acc 0.8586\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [11:02<00:00,  2.37s/it]\n"
+      "100%|██████████| 354/354 [14:00<00:00,  2.38s/it]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 1 | convnext Epoch 2/3 loss 0.5138 val_acc 0.8579\n"
+      "convnext Epoch 1 loss 0.5059 val_acc 0.8798\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [11:02<00:00,  2.37s/it]\n"
+      "100%|██████████| 354/354 [14:00<00:00,  2.38s/it]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 1 | convnext Epoch 3/3 loss 0.4520 val_acc 0.8974\n",
-      "Best convnext fold 1 val_acc: 0.8974\n",
-      "\n",
-      "========== Fold 2/3 ==========\n",
-      "Training resnext on fold 2\n"
+      "convnext Epoch 2 loss 0.4546 val_acc 0.8648\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [02:00<00:00,  2.32it/s]\n"
+      "100%|██████████| 354/354 [14:00<00:00,  2.37s/it]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 2 | resnext Epoch 1/5 loss 0.6396 val_acc 0.8107\n"
+      "convnext Epoch 3 loss 0.4092 val_acc 0.8883\n",
+      "FOLD 1\n",
+      "Training resnext\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [02:00<00:00,  2.32it/s]\n"
+      "100%|██████████| 356/356 [02:34<00:00,  2.30it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 2 | resnext Epoch 2/5 loss 0.5141 val_acc 0.8892\n"
+      "resnext Epoch 0 loss 0.6134 val_acc 0.8647\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [02:00<00:00,  2.32it/s]\n"
+      "100%|██████████| 356/356 [02:34<00:00,  2.31it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 2 | resnext Epoch 3/5 loss 0.4801 val_acc 0.8819\n"
+      "resnext Epoch 1 loss 0.4970 val_acc 0.8380\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [02:00<00:00,  2.32it/s]\n"
+      "100%|██████████| 356/356 [02:34<00:00,  2.31it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 2 | resnext Epoch 4/5 loss 0.4562 val_acc 0.9122\n"
+      "resnext Epoch 2 loss 0.4679 val_acc 0.8655\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [02:00<00:00,  2.32it/s]\n"
+      "100%|██████████| 356/356 [02:34<00:00,  2.30it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 2 | resnext Epoch 5/5 loss 0.4365 val_acc 0.9169\n",
-      "Best resnext fold 2 val_acc: 0.9169\n",
-      "Training convnext on fold 2\n"
+      "resnext Epoch 3 loss 0.4408 val_acc 0.8695\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [11:03<00:00,  2.38s/it]\n"
+      "100%|██████████| 356/356 [02:34<00:00,  2.30it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 2 | convnext Epoch 1/3 loss 0.6420 val_acc 0.8684\n"
+      "resnext Epoch 4 loss 0.4192 val_acc 0.8770\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [11:03<00:00,  2.38s/it]\n"
+      "100%|██████████| 356/356 [02:34<00:00,  2.31it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 2 | convnext Epoch 2/3 loss 0.5130 val_acc 0.8563\n"
+      "resnext Epoch 5 loss 0.4066 val_acc 0.8818\n",
+      "Training convnext\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [11:04<00:00,  2.38s/it]\n"
+      "100%|██████████| 356/356 [14:06<00:00,  2.38s/it]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 2 | convnext Epoch 3/3 loss 0.4574 val_acc 0.9145\n",
-      "Best convnext fold 2 val_acc: 0.9145\n",
-      "\n",
-      "========== Fold 3/3 ==========\n",
-      "Training resnext on fold 3\n"
+      "convnext Epoch 0 loss 0.6097 val_acc 0.8662\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n",
-      "100%|██████████| 279/279 [02:00<00:00,  2.32it/s]\n"
+      "100%|██████████| 356/356 [14:06<00:00,  2.38s/it]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 3 | resnext Epoch 1/5 loss 0.6382 val_acc 0.8510\n"
+      "convnext Epoch 1 loss 0.5007 val_acc 0.8653\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [02:00<00:00,  2.32it/s]\n"
+      "100%|██████████| 356/356 [14:06<00:00,  2.38s/it]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 3 | resnext Epoch 2/5 loss 0.5072 val_acc 0.8871\n"
+      "convnext Epoch 2 loss 0.4432 val_acc 0.8815\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [02:00<00:00,  2.32it/s]\n"
+      "100%|██████████| 356/356 [14:06<00:00,  2.38s/it]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 3 | resnext Epoch 3/5 loss 0.4784 val_acc 0.9123\n"
+      "convnext Epoch 3 loss 0.4019 val_acc 0.8818\n",
+      "FOLD 2\n",
+      "Training resnext\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [02:00<00:00,  2.32it/s]\n"
+      "100%|██████████| 360/360 [02:36<00:00,  2.31it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 3 | resnext Epoch 4/5 loss 0.4533 val_acc 0.9097\n"
+      "resnext Epoch 0 loss 0.6183 val_acc 0.8832\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [02:00<00:00,  2.32it/s]\n"
+      "100%|██████████| 360/360 [02:36<00:00,  2.31it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 3 | resnext Epoch 5/5 loss 0.4350 val_acc 0.9138\n",
-      "Best resnext fold 3 val_acc: 0.9138\n",
-      "Training convnext on fold 3\n"
+      "resnext Epoch 1 loss 0.5002 val_acc 0.9168\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [11:03<00:00,  2.38s/it]\n"
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 3 | convnext Epoch 1/3 loss 0.6208 val_acc 0.8535\n"
+      "resnext Epoch 2 loss 0.4701 val_acc 0.9102\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [11:03<00:00,  2.38s/it]\n"
+      "100%|██████████| 360/360 [02:36<00:00,  2.31it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 3 | convnext Epoch 2/3 loss 0.5104 val_acc 0.8801\n"
+      "resnext Epoch 3 loss 0.4428 val_acc 0.9114\n"
      ]
     },
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 279/279 [11:03<00:00,  2.38s/it]\n"
+      "100%|██████████| 360/360 [02:36<00:00,  2.31it/s]\n"
      ]
     },
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Fold 3 | convnext Epoch 3/3 loss 0.4498 val_acc 0.8951\n",
-      "Best convnext fold 3 val_acc: 0.8951\n"
+      "resnext Epoch 4 loss 0.4226 val_acc 0.9120\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.31it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 5 loss 0.4103 val_acc 0.9134\n",
+      "Training convnext\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:15<00:00,  2.38s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 0 loss 0.6144 val_acc 0.8561\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:15<00:00,  2.38s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 1 loss 0.5173 val_acc 0.8605\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:15<00:00,  2.38s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 2 loss 0.4548 val_acc 0.9025\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:15<00:00,  2.38s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 3 loss 0.4107 val_acc 0.9207\n",
+      "FOLD 3\n",
+      "Training resnext\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 0 loss 0.6161 val_acc 0.8738\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 1 loss 0.4990 val_acc 0.8759\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 2 loss 0.4648 val_acc 0.8964\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:37<00:00,  2.28it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 3 loss 0.4379 val_acc 0.8973\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 4 loss 0.4192 val_acc 0.8904\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 5 loss 0.4050 val_acc 0.8988\n",
+      "Training convnext\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:14<00:00,  2.37s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 0 loss 0.6220 val_acc 0.8821\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:14<00:00,  2.37s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 1 loss 0.5116 val_acc 0.8804\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:14<00:00,  2.37s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 2 loss 0.4519 val_acc 0.8796\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:14<00:00,  2.37s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 3 loss 0.4071 val_acc 0.8980\n",
+      "FOLD 4\n",
+      "Training resnext\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 0 loss 0.6084 val_acc 0.8421\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 1 loss 0.4944 val_acc 0.8127\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 2 loss 0.4641 val_acc 0.8461\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 3 loss 0.4399 val_acc 0.8838\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 4 loss 0.4199 val_acc 0.8798\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 5 loss 0.4057 val_acc 0.8770\n",
+      "Training convnext\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:13<00:00,  2.37s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 0 loss 0.6056 val_acc 0.8423\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:13<00:00,  2.37s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 1 loss 0.5013 val_acc 0.8195\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:13<00:00,  2.37s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 2 loss 0.4461 val_acc 0.8891\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:13<00:00,  2.37s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 3 loss 0.3998 val_acc 0.8779\n",
+      "FOLD 5\n",
+      "Training resnext\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 0 loss 0.6095 val_acc 0.8771\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 1 loss 0.4950 val_acc 0.8793\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 2 loss 0.4634 val_acc 0.8648\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 3 loss 0.4418 val_acc 0.8877\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 4 loss 0.4203 val_acc 0.9011\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 5 loss 0.4086 val_acc 0.8973\n",
+      "Training convnext\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:13<00:00,  2.37s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 0 loss 0.6247 val_acc 0.8670\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:14<00:00,  2.37s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 1 loss 0.5007 val_acc 0.8611\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:14<00:00,  2.37s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 2 loss 0.4466 val_acc 0.9007\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:13<00:00,  2.37s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 3 loss 0.4057 val_acc 0.8929\n",
+      "FOLD 6\n",
+      "Training resnext\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 0 loss 0.6123 val_acc 0.8654\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 1 loss 0.4982 val_acc 0.8721\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 2 loss 0.4685 val_acc 0.8870\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 3 loss 0.4446 val_acc 0.8861\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 4 loss 0.4242 val_acc 0.8912\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [02:36<00:00,  2.30it/s]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "resnext Epoch 5 loss 0.4099 val_acc 0.8995\n",
+      "Training convnext\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:14<00:00,  2.37s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 0 loss 0.6157 val_acc 0.8755\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:14<00:00,  2.37s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 1 loss 0.5046 val_acc 0.8745\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:14<00:00,  2.37s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 2 loss 0.4506 val_acc 0.8904\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "100%|██████████| 360/360 [14:14<00:00,  2.37s/it]\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "convnext Epoch 3 loss 0.4068 val_acc 0.8979\n"
      ]
     }
    ],
@@ -1060,17 +1800,20 @@
     "device = torch.device(\"cuda\" if torch.cuda.is_available() else \"cpu\")\n",
     "\n",
     "BATCH_SIZE = 96\n",
-    "EPOCHS_resnext = 5\n",
-    "EPOCHS_convnext = 3\n",
+    "EPOCHS_resnext = 6\n",
+    "EPOCHS_convnext = 4\n",
     "\n",
     "models = []\n",
     "\n",
-    "for fold, (train_split_df, val_split_df) in enumerate(fold_splits):\n",
+    "for fold in range(N_FOLDS):\n",
     "\n",
-    "    print(f\"\\n========== Fold {fold + 1}/{N_FOLDS} ==========\")\n",
+    "    print(\"FOLD\", fold)\n",
     "\n",
-    "    train_ds = CircleDataset(train_split_df, DATASET_DIR, train_tfms)\n",
-    "    val_ds = CircleDataset(val_split_df, DATASET_DIR, val_tfms)\n",
+    "    train_fold = train_df[train_df.fold != fold]\n",
+    "    val_fold = train_df[train_df.fold == fold]\n",
+    "\n",
+    "    train_ds = CircleDataset(train_fold, DATASET_DIR, train_tfms)\n",
+    "    val_ds = CircleDataset(val_fold, DATASET_DIR, val_tfms)\n",
     "\n",
     "    train_loader = DataLoader(\n",
     "        train_ds,\n",
@@ -1090,7 +1833,7 @@
     "\n",
     "    for model_name in [\"resnext\", \"convnext\"]:\n",
     "\n",
-    "        print(f\"Training {model_name} on fold {fold + 1}\")\n",
+    "        print(f\"Training {model_name}\")\n",
     "\n",
     "        model = build_model(model_name).to(device)\n",
     "\n",
@@ -1110,41 +1853,35 @@
     "            T_max=EPOCHS\n",
     "        )\n",
     "\n",
-    "        best_val_acc = 0.0\n",
-    "\n",
     "        for epoch in range(EPOCHS):\n",
     "\n",
     "            train_loss = train_epoch(model, train_loader, optimizer, device)\n",
     "\n",
     "            val_acc = validate(model, val_loader, device)\n",
     "\n",
-    "            print(f\"Fold {fold + 1} | {model_name} Epoch {epoch + 1}/{EPOCHS} loss {train_loss:.4f} val_acc {val_acc:.4f}\")\n",
-    "\n",
-    "            if val_acc > best_val_acc:\n",
-    "                best_val_acc = val_acc\n",
+    "            print(f\"{model_name} Epoch {epoch} loss {train_loss:.4f} val_acc {val_acc:.4f}\")\n",
     "\n",
     "            scheduler.step()\n",
     "\n",
-    "        print(f\"Best {model_name} fold {fold + 1} val_acc: {best_val_acc:.4f}\")\n",
-    "        models.append(model)\n"
+    "        models.append(model)"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 13,
-   "id": "299711ec",
+   "id": "c6d19ad7",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T04:22:36.009261Z",
-     "iopub.status.busy": "2026-03-26T04:22:36.008963Z",
-     "iopub.status.idle": "2026-03-26T04:29:08.293233Z",
-     "shell.execute_reply": "2026-03-26T04:29:08.292514Z"
+     "iopub.execute_input": "2026-03-29T20:12:37.742197Z",
+     "iopub.status.busy": "2026-03-29T20:12:37.741334Z",
+     "iopub.status.idle": "2026-03-29T20:26:55.774836Z",
+     "shell.execute_reply": "2026-03-29T20:26:55.774162Z"
     },
     "papermill": {
-     "duration": 392.527014,
-     "end_time": "2026-03-26T04:29:08.295255",
+     "duration": 859.07599,
+     "end_time": "2026-03-29T20:26:55.776854",
      "exception": false,
-     "start_time": "2026-03-26T04:22:35.768241",
+     "start_time": "2026-03-29T20:12:36.700864",
      "status": "completed"
     },
     "tags": []
@@ -1197,18 +1934,18 @@
     "\n",
     "preds = np.mean(preds, axis=0)\n",
     "\n",
-    "labels = preds.argmax(1) + 1\n"
+    "labels = preds.argmax(1) + 1"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "78a3f966",
+   "id": "ce0f80aa",
    "metadata": {
     "papermill": {
-     "duration": 0.242995,
-     "end_time": "2026-03-26T04:29:08.861907",
+     "duration": 0.974191,
+     "end_time": "2026-03-29T20:26:57.819324",
      "exception": false,
-     "start_time": "2026-03-26T04:29:08.618912",
+     "start_time": "2026-03-29T20:26:56.845133",
      "status": "completed"
     },
     "tags": []
@@ -1220,19 +1957,19 @@
   {
    "cell_type": "code",
    "execution_count": 14,
-   "id": "e01dd4f2",
+   "id": "8f650232",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T04:29:09.336329Z",
-     "iopub.status.busy": "2026-03-26T04:29:09.335531Z",
-     "iopub.status.idle": "2026-03-26T04:29:09.354297Z",
-     "shell.execute_reply": "2026-03-26T04:29:09.353553Z"
+     "iopub.execute_input": "2026-03-29T20:26:59.881724Z",
+     "iopub.status.busy": "2026-03-29T20:26:59.881409Z",
+     "iopub.status.idle": "2026-03-29T20:26:59.900937Z",
+     "shell.execute_reply": "2026-03-29T20:26:59.900256Z"
     },
     "papermill": {
-     "duration": 0.257365,
-     "end_time": "2026-03-26T04:29:09.355767",
+     "duration": 0.96499,
+     "end_time": "2026-03-29T20:26:59.902446",
      "exception": false,
-     "start_time": "2026-03-26T04:29:09.098402",
+     "start_time": "2026-03-29T20:26:58.937456",
      "status": "completed"
     },
     "tags": []
@@ -1250,19 +1987,19 @@
   {
    "cell_type": "code",
    "execution_count": 15,
-   "id": "e8ba2fa9",
+   "id": "9a7ce823",
    "metadata": {
     "execution": {
-     "iopub.execute_input": "2026-03-26T04:29:09.827414Z",
-     "iopub.status.busy": "2026-03-26T04:29:09.826725Z",
-     "iopub.status.idle": "2026-03-26T04:29:09.834535Z",
-     "shell.execute_reply": "2026-03-26T04:29:09.833922Z"
+     "iopub.execute_input": "2026-03-29T20:27:01.894477Z",
+     "iopub.status.busy": "2026-03-29T20:27:01.894160Z",
+     "iopub.status.idle": "2026-03-29T20:27:01.902767Z",
+     "shell.execute_reply": "2026-03-29T20:27:01.902159Z"
     },
     "papermill": {
-     "duration": 0.244716,
-     "end_time": "2026-03-26T04:29:09.835977",
+     "duration": 0.967487,
+     "end_time": "2026-03-29T20:27:01.904199",
      "exception": false,
-     "start_time": "2026-03-26T04:29:09.591261",
+     "start_time": "2026-03-29T20:27:00.936712",
      "status": "completed"
     },
     "tags": []
@@ -1348,7 +2085,6 @@
    "dataSources": [
     {
      "databundleVersionId": 15939853,
-     "isSourceIdPinned": false,
      "sourceId": 129872,
      "sourceType": "competition"
     }
@@ -1378,261 +2114,20 @@
   },
   "papermill": {
    "default_parameters": {},
-   "duration": 8950.445873,
-   "end_time": "2026-03-26T04:29:12.792374",
+   "duration": 32203.486501,
+   "end_time": "2026-03-29T20:27:06.429811",
    "environment_variables": {},
    "exception": null,
    "input_path": "__notebook__.ipynb",
    "output_path": "__notebook__.ipynb",
    "parameters": {},
-   "start_time": "2026-03-26T02:00:02.346501",
+   "start_time": "2026-03-29T11:30:22.943310",
    "version": "2.6.0"
   },
   "widgets": {
    "application/vnd.jupyter.widget-state+json": {
     "state": {
-     "1bfc0fbcde5c407283903a1da9c7474d": {
-      "model_module": "@jupyter-widgets/controls",
-      "model_module_version": "2.0.0",
-      "model_name": "HTMLModel",
-      "state": {
-       "_dom_classes": [],
-       "_model_module": "@jupyter-widgets/controls",
-       "_model_module_version": "2.0.0",
-       "_model_name": "HTMLModel",
-       "_view_count": null,
-       "_view_module": "@jupyter-widgets/controls",
-       "_view_module_version": "2.0.0",
-       "_view_name": "HTMLView",
-       "description": "",
-       "description_allow_html": false,
-       "layout": "IPY_MODEL_e610906f701345f39bb62dbcb1aa0b19",
-       "placeholder": "​",
-       "style": "IPY_MODEL_83bd22a3e9aa4f088f50f71f869b724c",
-       "tabbable": null,
-       "tooltip": null,
-       "value": "model.safetensors: 100%"
-      }
-     },
-     "222e30d53e8c4ec2847cbe51136bcdf9": {
-      "model_module": "@jupyter-widgets/base",
-      "model_module_version": "2.0.0",
-      "model_name": "LayoutModel",
-      "state": {
-       "_model_module": "@jupyter-widgets/base",
-       "_model_module_version": "2.0.0",
-       "_model_name": "LayoutModel",
-       "_view_count": null,
-       "_view_module": "@jupyter-widgets/base",
-       "_view_module_version": "2.0.0",
-       "_view_name": "LayoutView",
-       "align_content": null,
-       "align_items": null,
-       "align_self": null,
-       "border_bottom": null,
-       "border_left": null,
-       "border_right": null,
-       "border_top": null,
-       "bottom": null,
-       "display": null,
-       "flex": null,
-       "flex_flow": null,
-       "grid_area": null,
-       "grid_auto_columns": null,
-       "grid_auto_flow": null,
-       "grid_auto_rows": null,
-       "grid_column": null,
-       "grid_gap": null,
-       "grid_row": null,
-       "grid_template_areas": null,
-       "grid_template_columns": null,
-       "grid_template_rows": null,
-       "height": null,
-       "justify_content": null,
-       "justify_items": null,
-       "left": null,
-       "margin": null,
-       "max_height": null,
-       "max_width": null,
-       "min_height": null,
-       "min_width": null,
-       "object_fit": null,
-       "object_position": null,
-       "order": null,
-       "overflow": null,
-       "padding": null,
-       "right": null,
-       "top": null,
-       "visibility": null,
-       "width": null
-      }
-     },
-     "595ffdbab7ff41ccbcf911e96d7136de": {
-      "model_module": "@jupyter-widgets/controls",
-      "model_module_version": "2.0.0",
-      "model_name": "HTMLStyleModel",
-      "state": {
-       "_model_module": "@jupyter-widgets/controls",
-       "_model_module_version": "2.0.0",
-       "_model_name": "HTMLStyleModel",
-       "_view_count": null,
-       "_view_module": "@jupyter-widgets/base",
-       "_view_module_version": "2.0.0",
-       "_view_name": "StyleView",
-       "background": null,
-       "description_width": "",
-       "font_size": null,
-       "text_color": null
-      }
-     },
-     "82143a7f559d4432a272f47d1b20983f": {
-      "model_module": "@jupyter-widgets/base",
-      "model_module_version": "2.0.0",
-      "model_name": "LayoutModel",
-      "state": {
-       "_model_module": "@jupyter-widgets/base",
-       "_model_module_version": "2.0.0",
-       "_model_name": "LayoutModel",
-       "_view_count": null,
-       "_view_module": "@jupyter-widgets/base",
-       "_view_module_version": "2.0.0",
-       "_view_name": "LayoutView",
-       "align_content": null,
-       "align_items": null,
-       "align_self": null,
-       "border_bottom": null,
-       "border_left": null,
-       "border_right": null,
-       "border_top": null,
-       "bottom": null,
-       "display": null,
-       "flex": null,
-       "flex_flow": null,
-       "grid_area": null,
-       "grid_auto_columns": null,
-       "grid_auto_flow": null,
-       "grid_auto_rows": null,
-       "grid_column": null,
-       "grid_gap": null,
-       "grid_row": null,
-       "grid_template_areas": null,
-       "grid_template_columns": null,
-       "grid_template_rows": null,
-       "height": null,
-       "justify_content": null,
-       "justify_items": null,
-       "left": null,
-       "margin": null,
-       "max_height": null,
-       "max_width": null,
-       "min_height": null,
-       "min_width": null,
-       "object_fit": null,
-       "object_position": null,
-       "order": null,
-       "overflow": null,
-       "padding": null,
-       "right": null,
-       "top": null,
-       "visibility": null,
-       "width": null
-      }
-     },
-     "83bd22a3e9aa4f088f50f71f869b724c": {
-      "model_module": "@jupyter-widgets/controls",
-      "model_module_version": "2.0.0",
-      "model_name": "HTMLStyleModel",
-      "state": {
-       "_model_module": "@jupyter-widgets/controls",
-       "_model_module_version": "2.0.0",
-       "_model_name": "HTMLStyleModel",
-       "_view_count": null,
-       "_view_module": "@jupyter-widgets/base",
-       "_view_module_version": "2.0.0",
-       "_view_name": "StyleView",
-       "background": null,
-       "description_width": "",
-       "font_size": null,
-       "text_color": null
-      }
-     },
-     "8bdf2b3145d14a7baa71673f4d4e1300": {
-      "model_module": "@jupyter-widgets/base",
-      "model_module_version": "2.0.0",
-      "model_name": "LayoutModel",
-      "state": {
-       "_model_module": "@jupyter-widgets/base",
-       "_model_module_version": "2.0.0",
-       "_model_name": "LayoutModel",
-       "_view_count": null,
-       "_view_module": "@jupyter-widgets/base",
-       "_view_module_version": "2.0.0",
-       "_view_name": "LayoutView",
-       "align_content": null,
-       "align_items": null,
-       "align_self": null,
-       "border_bottom": null,
-       "border_left": null,
-       "border_right": null,
-       "border_top": null,
-       "bottom": null,
-       "display": null,
-       "flex": null,
-       "flex_flow": null,
-       "grid_area": null,
-       "grid_auto_columns": null,
-       "grid_auto_flow": null,
-       "grid_auto_rows": null,
-       "grid_column": null,
-       "grid_gap": null,
-       "grid_row": null,
-       "grid_template_areas": null,
-       "grid_template_columns": null,
-       "grid_template_rows": null,
-       "height": null,
-       "justify_content": null,
-       "justify_items": null,
-       "left": null,
-       "margin": null,
-       "max_height": null,
-       "max_width": null,
-       "min_height": null,
-       "min_width": null,
-       "object_fit": null,
-       "object_position": null,
-       "order": null,
-       "overflow": null,
-       "padding": null,
-       "right": null,
-       "top": null,
-       "visibility": null,
-       "width": null
-      }
-     },
-     "bec99f46d29b465e940dfda8f83b3adc": {
-      "model_module": "@jupyter-widgets/controls",
-      "model_module_version": "2.0.0",
-      "model_name": "HTMLModel",
-      "state": {
-       "_dom_classes": [],
-       "_model_module": "@jupyter-widgets/controls",
-       "_model_module_version": "2.0.0",
-       "_model_name": "HTMLModel",
-       "_view_count": null,
-       "_view_module": "@jupyter-widgets/controls",
-       "_view_module_version": "2.0.0",
-       "_view_name": "HTMLView",
-       "description": "",
-       "description_allow_html": false,
-       "layout": "IPY_MODEL_82143a7f559d4432a272f47d1b20983f",
-       "placeholder": "​",
-       "style": "IPY_MODEL_595ffdbab7ff41ccbcf911e96d7136de",
-       "tabbable": null,
-       "tooltip": null,
-       "value": " 41.3M/41.3M [00:01&lt;00:00, 38.5MB/s]"
-      }
-     },
-     "d68090a4d4124abea065ee572a9fa3d3": {
+     "3f9e57786f364de7b69ce3dcf897b607": {
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "2.0.0",
       "model_name": "ProgressStyleModel",
@@ -1648,7 +2143,53 @@
        "description_width": ""
       }
      },
-     "e610906f701345f39bb62dbcb1aa0b19": {
+     "453f35ce103441688ef5c2524a285b92": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "HTMLModel",
+      "state": {
+       "_dom_classes": [],
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "HTMLModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/controls",
+       "_view_module_version": "2.0.0",
+       "_view_name": "HTMLView",
+       "description": "",
+       "description_allow_html": false,
+       "layout": "IPY_MODEL_a80792f7c39a4c43a6afbf64cf3f9f15",
+       "placeholder": "​",
+       "style": "IPY_MODEL_a0a56e1ecf1047589176eca231d4e603",
+       "tabbable": null,
+       "tooltip": null,
+       "value": " 41.3M/41.3M [00:01&lt;00:00, 39.9MB/s]"
+      }
+     },
+     "64e5e49f12ec4f18b1c713452351713e": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "HTMLModel",
+      "state": {
+       "_dom_classes": [],
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "HTMLModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/controls",
+       "_view_module_version": "2.0.0",
+       "_view_name": "HTMLView",
+       "description": "",
+       "description_allow_html": false,
+       "layout": "IPY_MODEL_da5e7ed7dedd452290ab9144e315e95f",
+       "placeholder": "​",
+       "style": "IPY_MODEL_c5dca61b453547778040c0d0693a69f8",
+       "tabbable": null,
+       "tooltip": null,
+       "value": "model.safetensors: 100%"
+      }
+     },
+     "8f7e898b1d4543439d2df1ef4c725172": {
       "model_module": "@jupyter-widgets/base",
       "model_module_version": "2.0.0",
       "model_name": "LayoutModel",
@@ -1701,7 +2242,7 @@
        "width": null
       }
      },
-     "e9067a09015c4ffb9a43af2ce60ab3b9": {
+     "99d7cd66d6854ad382b97e5808578224": {
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "2.0.0",
       "model_name": "FloatProgressModel",
@@ -1717,17 +2258,159 @@
        "bar_style": "success",
        "description": "",
        "description_allow_html": false,
-       "layout": "IPY_MODEL_8bdf2b3145d14a7baa71673f4d4e1300",
+       "layout": "IPY_MODEL_8f7e898b1d4543439d2df1ef4c725172",
        "max": 41334502.0,
        "min": 0.0,
        "orientation": "horizontal",
-       "style": "IPY_MODEL_d68090a4d4124abea065ee572a9fa3d3",
+       "style": "IPY_MODEL_3f9e57786f364de7b69ce3dcf897b607",
        "tabbable": null,
        "tooltip": null,
        "value": 41334502.0
       }
      },
-     "f58c7e97c88f491a8f6a5dcf08119c97": {
+     "a0a56e1ecf1047589176eca231d4e603": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "HTMLStyleModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "HTMLStyleModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "StyleView",
+       "background": null,
+       "description_width": "",
+       "font_size": null,
+       "text_color": null
+      }
+     },
+     "a80792f7c39a4c43a6afbf64cf3f9f15": {
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "model_name": "LayoutModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/base",
+       "_model_module_version": "2.0.0",
+       "_model_name": "LayoutModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "LayoutView",
+       "align_content": null,
+       "align_items": null,
+       "align_self": null,
+       "border_bottom": null,
+       "border_left": null,
+       "border_right": null,
+       "border_top": null,
+       "bottom": null,
+       "display": null,
+       "flex": null,
+       "flex_flow": null,
+       "grid_area": null,
+       "grid_auto_columns": null,
+       "grid_auto_flow": null,
+       "grid_auto_rows": null,
+       "grid_column": null,
+       "grid_gap": null,
+       "grid_row": null,
+       "grid_template_areas": null,
+       "grid_template_columns": null,
+       "grid_template_rows": null,
+       "height": null,
+       "justify_content": null,
+       "justify_items": null,
+       "left": null,
+       "margin": null,
+       "max_height": null,
+       "max_width": null,
+       "min_height": null,
+       "min_width": null,
+       "object_fit": null,
+       "object_position": null,
+       "order": null,
+       "overflow": null,
+       "padding": null,
+       "right": null,
+       "top": null,
+       "visibility": null,
+       "width": null
+      }
+     },
+     "c5dca61b453547778040c0d0693a69f8": {
+      "model_module": "@jupyter-widgets/controls",
+      "model_module_version": "2.0.0",
+      "model_name": "HTMLStyleModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/controls",
+       "_model_module_version": "2.0.0",
+       "_model_name": "HTMLStyleModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "StyleView",
+       "background": null,
+       "description_width": "",
+       "font_size": null,
+       "text_color": null
+      }
+     },
+     "da5e7ed7dedd452290ab9144e315e95f": {
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "model_name": "LayoutModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/base",
+       "_model_module_version": "2.0.0",
+       "_model_name": "LayoutModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "LayoutView",
+       "align_content": null,
+       "align_items": null,
+       "align_self": null,
+       "border_bottom": null,
+       "border_left": null,
+       "border_right": null,
+       "border_top": null,
+       "bottom": null,
+       "display": null,
+       "flex": null,
+       "flex_flow": null,
+       "grid_area": null,
+       "grid_auto_columns": null,
+       "grid_auto_flow": null,
+       "grid_auto_rows": null,
+       "grid_column": null,
+       "grid_gap": null,
+       "grid_row": null,
+       "grid_template_areas": null,
+       "grid_template_columns": null,
+       "grid_template_rows": null,
+       "height": null,
+       "justify_content": null,
+       "justify_items": null,
+       "left": null,
+       "margin": null,
+       "max_height": null,
+       "max_width": null,
+       "min_height": null,
+       "min_width": null,
+       "object_fit": null,
+       "object_position": null,
+       "order": null,
+       "overflow": null,
+       "padding": null,
+       "right": null,
+       "top": null,
+       "visibility": null,
+       "width": null
+      }
+     },
+     "fd409b1c373444d680af0ade72331140": {
       "model_module": "@jupyter-widgets/controls",
       "model_module_version": "2.0.0",
       "model_name": "HBoxModel",
@@ -1742,13 +2425,66 @@
        "_view_name": "HBoxView",
        "box_style": "",
        "children": [
-        "IPY_MODEL_1bfc0fbcde5c407283903a1da9c7474d",
-        "IPY_MODEL_e9067a09015c4ffb9a43af2ce60ab3b9",
-        "IPY_MODEL_bec99f46d29b465e940dfda8f83b3adc"
+        "IPY_MODEL_64e5e49f12ec4f18b1c713452351713e",
+        "IPY_MODEL_99d7cd66d6854ad382b97e5808578224",
+        "IPY_MODEL_453f35ce103441688ef5c2524a285b92"
        ],
-       "layout": "IPY_MODEL_222e30d53e8c4ec2847cbe51136bcdf9",
+       "layout": "IPY_MODEL_fecbeca0bf9c4e3a94d55aa858f69b31",
        "tabbable": null,
        "tooltip": null
+      }
+     },
+     "fecbeca0bf9c4e3a94d55aa858f69b31": {
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "model_name": "LayoutModel",
+      "state": {
+       "_model_module": "@jupyter-widgets/base",
+       "_model_module_version": "2.0.0",
+       "_model_name": "LayoutModel",
+       "_view_count": null,
+       "_view_module": "@jupyter-widgets/base",
+       "_view_module_version": "2.0.0",
+       "_view_name": "LayoutView",
+       "align_content": null,
+       "align_items": null,
+       "align_self": null,
+       "border_bottom": null,
+       "border_left": null,
+       "border_right": null,
+       "border_top": null,
+       "bottom": null,
+       "display": null,
+       "flex": null,
+       "flex_flow": null,
+       "grid_area": null,
+       "grid_auto_columns": null,
+       "grid_auto_flow": null,
+       "grid_auto_rows": null,
+       "grid_column": null,
+       "grid_gap": null,
+       "grid_row": null,
+       "grid_template_areas": null,
+       "grid_template_columns": null,
+       "grid_template_rows": null,
+       "height": null,
+       "justify_content": null,
+       "justify_items": null,
+       "left": null,
+       "margin": null,
+       "max_height": null,
+       "max_width": null,
+       "min_height": null,
+       "min_width": null,
+       "object_fit": null,
+       "object_position": null,
+       "order": null,
+       "overflow": null,
+       "padding": null,
+       "right": null,
+       "top": null,
+       "visibility": null,
+       "width": null
       }
      }
     },
